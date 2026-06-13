@@ -107,7 +107,7 @@ md:h-[420px]
           className="
           text-5xl
           md:text-7xl
-          font-serif
+          font-[Cormorant_Garamond]
           text-[#9A7B45]
           mt-48
           leading-tight

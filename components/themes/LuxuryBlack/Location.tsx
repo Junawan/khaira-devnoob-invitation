@@ -40,7 +40,7 @@ export default function LuxuryBlackLocation({
 
         </div>
 
-        <h2 className="text-4xl font-serif text-yellow-400">
+        <h2 className="text-4xl font-[Cormorant_Garamond] text-yellow-400">
           Lokasi Acara
         </h2>
 

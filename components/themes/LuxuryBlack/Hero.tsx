@@ -126,7 +126,7 @@ left-2
           className="
           text-4xl
 md:text-7xl
-          font-serif
+          font-[Cormorant_Garamond]
           text-yellow-400
           leading-tight
           mt-0

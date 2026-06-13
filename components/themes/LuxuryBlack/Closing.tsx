@@ -11,7 +11,7 @@ export default function LuxuryBlackClosing() {
       <h2
         className="
         text-4xl
-        font-serif
+        font-[Cormorant_Garamond]
         text-yellow-400
         "
       >

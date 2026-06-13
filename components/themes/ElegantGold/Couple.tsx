@@ -58,7 +58,7 @@ export default function ElegantGoldCouple({
     className="
     text-4xl
     md:text-5xl
-    font-serif
+    font-[Cormorant_Garamond]
     text-[#9A7B45]
     "
   >

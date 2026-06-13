@@ -31,7 +31,7 @@ export default function ElegantGoldEvents({
           className="
           text-4xl
           md:text-5xl
-          font-serif
+          font-[Cormorant_Garamond]
           text-[#9A7B45]
           "
         >
@@ -80,7 +80,7 @@ export default function ElegantGoldEvents({
               className="
               text-3xl
               md:text-4xl
-              font-serif
+              font-[Cormorant_Garamond]
               text-[#9A7B45]
               mb-1
               "
@@ -132,7 +132,7 @@ export default function ElegantGoldEvents({
               className="
               text-3xl
               md:text-4xl
-              font-serif
+              font-[Cormorant_Garamond]
               text-[#9A7B45]
               mb-1
               "

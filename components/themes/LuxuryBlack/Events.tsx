@@ -31,7 +31,7 @@ export default function LuxuryBlackEvents({
           className="
           text-4xl
           md:text-5xl
-          font-serif
+          font-[Cormorant_Garamond]
           text-yellow-400
           "
         >
@@ -80,7 +80,7 @@ export default function LuxuryBlackEvents({
               className="
               text-3xl
               md:text-4xl
-              font-serif
+              font-[Cormorant_Garamond]
               text-yellow-400
               mb-1
               "
@@ -132,7 +132,7 @@ export default function LuxuryBlackEvents({
               className="
               text-3xl
               md:text-4xl
-              font-serif
+              font-[Cormorant_Garamond]
               text-yellow-400
               mb-1
               "

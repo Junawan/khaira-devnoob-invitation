@@ -59,7 +59,7 @@ export default function ElegantGoldWishes({
 
       <div className="max-w-3xl mx-auto px-6">
 
-        <h2 className="text-center text-4xl font-serif text-[#9A7B45]">
+        <h2 className="text-center text-4xl font-[Cormorant_Garamond] text-[#9A7B45]">
           Ucapan & Doa
         </h2>
 

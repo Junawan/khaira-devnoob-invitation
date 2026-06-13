@@ -36,7 +36,7 @@ export default function ElegantGoldGift({
 
       </div>
 
-      <h2 className="text-4xl font-serif text-[#9A7B45]">
+      <h2 className="text-4xl font-[Cormorant_Garamond] text-[#9A7B45]">
         Amplop Digital
       </h2>
 

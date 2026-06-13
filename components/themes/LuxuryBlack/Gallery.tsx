@@ -34,7 +34,7 @@ export default function LuxuryBlackGallery({
         className="
         text-4xl
         md:text-5xl
-        font-serif
+        font-[Cormorant_Garamond]
         text-center
         text-yellow-400
         mb-16

@@ -36,7 +36,7 @@ export default function LuxuryBlackGift({
 
       </div>
 
-      <h2 className="text-4xl font-serif text-yellow-400">
+      <h2 className="text-4xl font-[Cormorant_Garamond] text-yellow-400">
         Amplop Digital
       </h2>
 

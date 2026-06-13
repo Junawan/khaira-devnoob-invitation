@@ -58,7 +58,7 @@ export default function LuxuryBlackCouple({
     className="
     text-4xl
     md:text-5xl
-    font-serif
+    font-[Cormorant_Garamond]
     text-yellow-400
     "
   >
@@ -119,7 +119,7 @@ h-[70%]
           <h3
             className="
             text-4xl
-            font-serif
+            font-[Cormorant_Garamond]
             text-yellow-400
             mt-8
             "
@@ -224,7 +224,7 @@ h-[70%]
           <h3
             className="
             text-4xl
-            font-serif
+            font-[Cormorant_Garamond]
             text-yellow-400
             mt-8
             "

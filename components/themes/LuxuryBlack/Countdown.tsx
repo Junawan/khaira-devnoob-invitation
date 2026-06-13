@@ -85,7 +85,7 @@ export default function Countdown({
         </div>
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-serif text-yellow-400">
+        <h2 className="text-4xl md:text-5xl font-[Cormorant_Garamond] text-yellow-400">
           Menuju Hari Bahagia
         </h2>
 

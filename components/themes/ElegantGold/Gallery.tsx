@@ -34,7 +34,7 @@ export default function elegantGoldGallery({
         className="
         text-4xl
         md:text-5xl
-        font-serif
+        font-[Cormorant_Garamond]
         text-center
         text-[#9A7B45]
         mb-16
