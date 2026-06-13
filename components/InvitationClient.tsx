@@ -24,6 +24,9 @@ from "./themes/ElegantGold/Events";
 import LuxuryBlackHero
 from "./themes/LuxuryBlack/Hero";
 
+import LuxuryBlackOpening
+from "./themes/LuxuryBlack/Opening";
+
 import LuxuryBlackEvents
 from "./themes/LuxuryBlack/Events";
 
@@ -61,6 +64,9 @@ from "./themes/ElegantGold/Couple";
 
 import ElegantGoldHero
 from "./themes/ElegantGold/Hero";
+
+import ElegantGoldOpening
+from "./themes/ElegantGold/Opening";
 
 import ElegantGoldLoveStory
 from "./themes/ElegantGold/LoveStory";
@@ -192,6 +198,8 @@ export default function InvitationClient({
   coverImage={data.coverImage}
 />
 
+<LuxuryBlackOpening />
+
 <LuxuryBlackCouple
   data={data}
 />
@@ -239,6 +247,8 @@ export default function InvitationClient({
     bride={data.bride}
     coverImage={data.coverImage}
   />
+
+  <ElegantGoldOpening />
 
   <ElegantGoldCouple
     data={data}
