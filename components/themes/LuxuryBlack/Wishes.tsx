@@ -59,7 +59,7 @@ export default function LuxuryBlackWishes({
 
       <div className="max-w-3xl mx-auto px-6">
 
-        <h2 className="text-center text-4xl font-serif text-yellow-400">
+        <h2 className="text-center text-4xl font-[Cormorant_Garamond] text-yellow-400">
           Ucapan & Doa
         </h2>
 

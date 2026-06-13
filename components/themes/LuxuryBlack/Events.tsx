@@ -82,7 +82,7 @@ export default function LuxuryBlackEvents({
               md:text-4xl
               font-serif
               text-yellow-400
-              mb-6
+              mb-1
               "
             >
               Akad Nikah
@@ -134,7 +134,7 @@ export default function LuxuryBlackEvents({
               md:text-4xl
               font-serif
               text-yellow-400
-              mb-6
+              mb-1
               "
             >
               Resepsi
