@@ -35,36 +35,33 @@ export default function InvitationWrapper({
     const isLuxury =
   theme === "luxury-black";
 
-  const FRAME = 320;
-const PHOTO = 220;
-
   if (!opened) {
 
     return (
 
       <div
         className={`
-fixed inset-0
+fixed
+inset-0
+overflow-y-auto
+px-5
+pt-12
+pb-10
 flex
 justify-center
 items-start
-overflow-auto
-z-50
-px-5
-${isLuxury
-  ? "bg-black"
-  : "bg-[#faf8f3]"
-}
+${isLuxury ? "bg-black" : "bg-[#faf8f3]"}
 `}
       >
 
         <img
   src="/images/luxury/corner_left.png"
+  alt=""
   className="
   absolute
   top-0
   left-0
-  w-20
+  w-24
   md:w-36
   opacity-60
   "
@@ -72,25 +69,27 @@ ${isLuxury
 
 <img
   src="/images/luxury/corner_right.png"
+  alt=""
   className="
   absolute
   top-0
   right-0
-  w-20
+  w-24
   md:w-36
   opacity-60
   "
 />
 
         <div
-          className="
-          relative
-          z-10
-          max-w-lg
-          w-full
-          text-center
-          "
-        >
+className="
+relative
+z-10
+w-full
+max-w-lg
+mx-auto
+pb-10
+"
+>
 
           <p
             className={`
@@ -108,42 +107,63 @@ ${isLuxury
           </p>
 
           <div
-  style={{
-    width: FRAME,
-    height: FRAME,
-  }}
-  className="relative mx-auto mt-8"
+className="
+relative
+mx-auto
+mt-8
+w-[260px]
+h-[260px]
+sm:w-[300px]
+sm:h-[300px]
+md:w-[340px]
+md:h-[340px]
+"
 >
 
-  <div className="absolute inset-0 flex items-center justify-center">
+            <img
+src={coverImage}
+className="
+absolute
+left-1/2
+top-1/2
+-w-0
+-translate-x-1/2
+-translate-y-1/2
+w-[180px]
+h-[180px]
+sm:w-[205px]
+sm:h-[205px]
+md:w-[235px]
+md:h-[235px]
+rounded-full
+object-cover
+"
+/>
 
-    <img
-      src={coverImage}
-      alt=""
-      style={{
-        width: PHOTO,
-        height: PHOTO,
-      }}
-      className="rounded-full object-cover"
-    />
+            <img
+src="/images/luxury/round_frame.png"
+className="
+absolute
+inset-0
+w-full
+h-full
+object-contain
+pointer-events-none
+"
+/>
 
-  </div>
-
-  <img
-    src="/images/luxury/round_frame.png"
-    className="absolute inset-0 w-full h-full object-contain"
-  />
-
-</div>
+          </div>
 
           <img
   src="/images/luxury/divider_hero.png"
   alt=""
   className="
-  w-72
-  mx-auto
-  mt-8
-  "
+w-56
+sm:w-64
+md:w-72
+mx-auto
+mt-6
+"
 />
 
 <p
