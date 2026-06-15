@@ -21,7 +21,7 @@ export default function ElegantGoldOpening() {
         />
 
         <p className="mt-4 
-        text-1xl
+        text-[22px]
 md:text-1xl
         text-blac
         leading-loose
@@ -34,7 +34,7 @@ md:text-1xl
         </p>
 
         <p className="mt-2
-        text-1xl
+        text-[22px]
 md:text-1xl
         text-black
         leading-loose

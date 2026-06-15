@@ -14,7 +14,7 @@ export default function LuxuryBlackEvents({
     >
 
       {/* Judul */}
-      <div className="text-center mb-20">
+      <div className="text-center mb-10">
 
         <img
   src="/images/luxury/18.png"
@@ -74,13 +74,14 @@ export default function LuxuryBlackEvents({
             items-center
             text-center
             px-10
+            -mt-6
             "
           >
 
             <h3
-              className="text-yellow-300 tracking-[5px] 
+              className="text-yellow-300 tracking-[3px] 
       font-[family-name:var(--font-pinyon-script)]
-      text-sm"
+      text-[26px]"
             >
               Akad Nikah
             </h3>
@@ -128,13 +129,15 @@ leading-tight
             items-center
             text-center
             px-10
+            -mt-6
             "
           >
 
             <h3
-              className="text-yellow-300 tracking-[5px] 
+              className="text-yellow-300 tracking-[3px] 
       font-[family-name:var(--font-pinyon-script)]
-      text-sm"
+      text-sm
+      text-[26px]"
             >
               Resepsi
             </h3>

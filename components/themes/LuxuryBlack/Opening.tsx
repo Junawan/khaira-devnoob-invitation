@@ -21,7 +21,7 @@ export default function LuxuryBlackOpening() {
         />
 
         <p className="mt-4 
-        text-1xl
+        text-[22px]
 md:text-1xl
         text-zinc-300 
         leading-loose
@@ -33,7 +33,7 @@ md:text-1xl
         </p>
 
         <p className="mt-2
-        text-1xl
+        text-[22px]
 md:text-1xl
         text-zinc-300 
         leading-loose
