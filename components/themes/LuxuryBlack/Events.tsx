@@ -78,7 +78,7 @@ export default function LuxuryBlackEvents({
           >
 
             <h3
-              className="text-yellow-300 tracking-[1px] 
+              className="text-yellow-300 tracking-[3px] 
       font-[family-name:var(--font-pinyon-script)]
       text-sm"
             >
@@ -132,7 +132,7 @@ leading-tight
           >
 
             <h3
-              className="text-yellow-300 tracking-[1px] 
+              className="text-yellow-300 tracking-[3px] 
       font-[family-name:var(--font-pinyon-script)]
       text-sm"
             >

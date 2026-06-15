@@ -306,7 +306,7 @@ px-8
 "
 >
 
-      <p className="text-yellow-300 tracking-[1px] 
+      <p className="text-yellow-300 tracking-[2px] 
       font-[family-name:var(--font-pinyon-script)]
       text-sm">
     Kepada Yth.

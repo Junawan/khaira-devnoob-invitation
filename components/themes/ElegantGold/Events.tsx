@@ -78,21 +78,20 @@ export default function ElegantGoldEvents({
           >
 
             <h3
-              className="
-              text-2xl
-              md:text-4xl
-              font-[family-name:var(--font-great-vibes)]
-              text-yellow-400
-              mb-1
-              "
+              className="text-yellow-300 tracking-[3px] 
+      font-[family-name:var(--font-pinyon-script)]
+      text-sm"
             >
               Akad Nikah
             </h3>
 
-            <div className="space-y-0 text-white
-            text-2xl
-md:text-2xl
-            font-[family-name:var(--font-pinyon-script)]">
+            <div className="
+mt-2
+text-2xl
+font-[family-name:var(--font-great-vibes)]
+text-yellow-400
+leading-tight
+">
 
               <p>{data.akadDate}</p>
 
@@ -133,21 +132,20 @@ md:text-2xl
           >
 
             <h3
-              className="
-              text-3xl
-              md:text-4xl
-              font-[family-name:var(--font-great-vibes)]
-              text-yellow-400
-              mb-1
-              "
+              className="text-yellow-300 tracking-[3px] 
+      font-[family-name:var(--font-pinyon-script)]
+      text-sm"
             >
               Resepsi
             </h3>
 
-            <div className="space-y-0 text-white
-            text-2xl
-md:text-2xl
-            font-[family-name:var(--font-pinyon-script)]">
+            <div className="
+mt-2
+text-2xl
+font-[family-name:var(--font-great-vibes)]
+text-yellow-400
+leading-tight
+">
 
               <p>{data.resepsiDate}</p>
 
