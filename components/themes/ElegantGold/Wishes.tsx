@@ -87,7 +87,7 @@ export default function ElegantGoldWishes({
               "
             >
 
-              <h3 className="text-yellow-300 
+              <h3 className="text-[#9A7B45] 
               font-[family-name:var(--font-great-vibes)]
               font-bold">
                 {item.name}

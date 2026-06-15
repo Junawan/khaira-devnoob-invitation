@@ -25,7 +25,8 @@ export default function ElegantGoldOpening() {
 md:text-2xl
         text-blac
         leading-loose
-        font-[family-name:var(--font-pinyon-script)]">
+        font-[family-name:var(--font-pinyon-script)]
+        font-bold">
           Dengan memohon rahmat dan ridho
           Allah SWT, kami bermaksud
           menyelenggarakan acara pernikahan
@@ -37,7 +38,8 @@ md:text-2xl
 md:text-2xl
         text-black
         leading-loose
-        font-[family-name:var(--font-pinyon-script)]">
+        font-[family-name:var(--font-pinyon-script)]
+        font-bold">
           Merupakan suatu kehormatan dan
           kebahagiaan bagi kami apabila
           Bapak/Ibu/Saudara/i berkenan hadir
