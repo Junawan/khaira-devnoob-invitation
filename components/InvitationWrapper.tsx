@@ -128,10 +128,10 @@ ${isLuxury
 
   </div>
 
-  <img
+  {/*<img
     src="/images/luxury/round_frame.png"
     className="absolute inset-0 w-full h-full object-contain"
-  />
+  />*/}
 
 </div>
 
