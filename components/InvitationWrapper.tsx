@@ -135,6 +135,7 @@ ${isLuxury
   className="
   absolute
   inset-0
+  top-0
   w-full
   h-full
   object-contain

@@ -28,8 +28,8 @@ export default function LuxuryBlackHero({
         absolute
         top-0
         left-0
-        w-48
-md:w-72
+        w-24
+  md:w-36
         opacity-60
         pointer-events-none
         "
