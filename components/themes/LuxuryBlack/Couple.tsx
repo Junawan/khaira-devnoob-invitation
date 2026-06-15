@@ -7,7 +7,7 @@ export default function LuxuryBlackCouple({
     <section
   className="
   relative
-  py-32
+  py-12
   px-5
   overflow-hidden
   "
@@ -58,7 +58,7 @@ export default function LuxuryBlackCouple({
     className="
     text-4xl
     md:text-5xl
-    font-[Cormorant_Garamond]
+    font-[family-name:var(--font-great-vibes)] font-bold
     text-yellow-400
     "
   >
@@ -119,7 +119,7 @@ h-[70%]
           <h3
             className="
             text-4xl
-            font-[Cormorant_Garamond]
+            font-[family-name:var(--font-great-vibes)] font-bold
             text-yellow-400
             mt-8
             "
@@ -130,6 +130,7 @@ h-[70%]
           <p
             className="
             text-yellow-500
+            font-[family-name:var(--font-body)]
             uppercase
             tracking-widest
             text-sm
@@ -139,19 +140,28 @@ h-[70%]
             {data.groomTitle}
           </p>
 
-          <p className="text-white mt-4">
+          <p className="text-white mt-4
+          text-2xl
+md:text-2xl
+          font-[family-name:var(--font-pinyon-script)]">
             Bapak {data.groomFather}
           </p>
 
-          <p className="text-yellow-500 my-2">
+          <p className="text-yellow-500 my-2
+          text-2xl
+md:text-2xl
+          font-[family-name:var(--font-pinyon-script)]">
             &
           </p>
 
-          <p className="text-white">
+          <p className="text-white
+          text-2xl
+md:text-2xl
+          font-[family-name:var(--font-pinyon-script)]">
             Ibu {data.groomMother}
           </p>
 
-          <div className="mt-24 text-center">
+          <div className="mt-20 text-center">
   <img
     src="/images/luxury/3.png"
     alt=""
@@ -224,7 +234,7 @@ h-[70%]
           <h3
             className="
             text-4xl
-            font-[Cormorant_Garamond]
+            font-[family-name:var(--font-great-vibes)] font-bold
             text-yellow-400
             mt-8
             "
@@ -235,6 +245,7 @@ h-[70%]
           <p
             className="
             text-yellow-500
+            font-[family-name:var(--font-body)]
             uppercase
             tracking-widest
             text-sm
@@ -244,19 +255,28 @@ h-[70%]
             {data.brideTitle}
           </p>
 
-          <p className="text-white mt-4">
+          <p className="text-white mt-4
+          text-2xl
+md:text-2xl
+          font-[family-name:var(--font-pinyon-script)]">
             Bapak {data.brideFather}
           </p>
 
-          <p className="text-yellow-500 my-2">
+          <p className="text-yellow-500 my-2
+          text-2xl
+md:text-2xl
+          font-[family-name:var(--font-pinyon-script)]">
             &
           </p>
 
-          <p className="text-white">
+          <p className="text-white
+          text-2xl
+md:text-2xl
+          font-[family-name:var(--font-pinyon-script)]">
             Ibu {data.brideMother}
           </p>
 
-          <div className="mt-24 text-center">
+          <div className="mt-20 text-center">
   <img
     src="/images/luxury/3.png"
     alt=""

@@ -40,7 +40,10 @@ export default function ElegantGoldLocation({
 
         </div>
 
-        <h2 className="text-4xl font-[Cormorant_Garamond] text-[#9A7B45]">
+        <h2 className="text-4xl 
+        font-[family-name:var(--font-great-vibes)] 
+        font-bold 
+        text-[#9A7B45]">
           Lokasi Acara
         </h2>
 
@@ -55,13 +58,17 @@ export default function ElegantGoldLocation({
           border
           border-yellow-500/20
           rounded-3xl
-          bg-zinc-900/50
+          bg-white
           p-8
           "
         >
 
           {resepsiPlace && (
-            <p className="text-zinc-300">
+            <p className="text-black
+            text-2xl
+md:text-2xl
+            font-[family-name:var(--font-pinyon-script)]
+            font-bold">
               {resepsiPlace}
             </p>
           )}
@@ -78,9 +85,9 @@ export default function ElegantGoldLocation({
           px-8
           py-4
           rounded-full
-          bg-[#9A7B45]
+          bg-yellow-600
           hover:bg-yellow-500
-          text-white
+          text-black
           transition
           "
         >

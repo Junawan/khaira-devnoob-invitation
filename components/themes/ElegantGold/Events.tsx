@@ -7,7 +7,7 @@ export default function ElegantGoldEvents({
     <section
       className="
       relative
-      py-32
+      py-18
       px-5
       overflow-hidden
       "
@@ -22,7 +22,7 @@ export default function ElegantGoldEvents({
   className="
   w-72
   mx-auto
-  mb-6
+  mb-4
   opacity-90
   "
 />
@@ -31,7 +31,8 @@ export default function ElegantGoldEvents({
           className="
           text-4xl
           md:text-5xl
-          font-[Cormorant_Garamond]
+          font-[family-name:var(--font-great-vibes)]
+          font-bold
           text-[#9A7B45]
           "
         >
@@ -78,17 +79,20 @@ export default function ElegantGoldEvents({
 
             <h3
               className="
-              text-3xl
+              text-2xl
               md:text-4xl
-              font-[Cormorant_Garamond]
-              text-[#9A7B45]
+              font-[family-name:var(--font-great-vibes)]
+              text-yellow-400
               mb-1
               "
             >
               Akad Nikah
             </h3>
 
-            <div className="space-y-3 text-white">
+            <div className="space-y-0 text-white
+            text-2xl
+md:text-2xl
+            font-[family-name:var(--font-pinyon-script)]">
 
               <p>{data.akadDate}</p>
 
@@ -132,15 +136,18 @@ export default function ElegantGoldEvents({
               className="
               text-3xl
               md:text-4xl
-              font-[Cormorant_Garamond]
-              text-[#9A7B45]
+              font-[family-name:var(--font-great-vibes)]
+              text-yellow-400
               mb-1
               "
             >
               Resepsi
             </h3>
 
-            <div className="space-y-3 text-white">
+            <div className="space-y-0 text-white
+            text-2xl
+md:text-2xl
+            font-[family-name:var(--font-pinyon-script)]">
 
               <p>{data.resepsiDate}</p>
 

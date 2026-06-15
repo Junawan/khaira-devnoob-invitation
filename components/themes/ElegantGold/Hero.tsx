@@ -2,12 +2,10 @@ export default function ElegantGoldHero({
   groom,
   bride,
   coverImage,
-  date,
 }: {
   groom: string;
   bride: string;
   coverImage: string;
-  date?: string;
 }) {
   return (
     <section
@@ -18,44 +16,76 @@ export default function ElegantGoldHero({
       items-center
       justify-center
       overflow-hidden
-      bg-[#faf8f3]
+      px-6
+      text-center
       "
     >
+      {/* Corner */}
+      <div className="fixed inset-0 pointer-events-none z-0">
 
-      <img
-        src="/images/luxury/corner_left.png"
-        alt=""
-        className="
-        absolute
-        top-0
-        left-0
-        w-24
+        <img
+  src="/images/luxury/corner_left.png"
+  alt=""
+  className="
+  absolute
+  top-0
+  left-0
+  w-24
   md:w-36
-        opacity-60
-        pointer-events-none
-        "
-      />
+  opacity-60
+  "
+/>
 
-      <img
-        src="/images/luxury/corner_right.png"
-        alt=""
-        className="
-        absolute
-        top-0
-        right-0
-        w-24
+<img
+  src="/images/luxury/corner_right.png"
+  alt=""
+  className="
+  absolute
+  top-0
+  right-0
+  w-24
   md:w-36
-        opacity-60
-        pointer-events-none
-        "
-      />
+  opacity-60
+  "
+/>
+
+<img
+  src="/images/luxury/corner_left_bottom.png"
+  alt=""
+  className="
+  fixed
+  bottom-0
+  left-0
+  w-24
+  md:w-36
+  opacity-60
+  pointer-events-none
+  z-0
+  "
+/>
+
+<img
+  src="/images/luxury/corner_right_bottom.png"
+  alt=""
+  className="
+  fixed
+  bottom-0
+  right-0
+  w-24
+  md:w-36
+  opacity-60
+  pointer-events-none
+  z-0
+  "
+/>
+</div>
 
       <div
         className="
-        max-w-5xl
+        relative
+        z-10
+        max-w-xl
         mx-auto
-        px-6
-        text-center
         "
       >
 
@@ -68,18 +98,21 @@ export default function ElegantGoldHero({
           mb-6
           "
         />
-
         <p
           className="
           uppercase
-          tracking-[6px]
+          tracking-[8px]
           text-[#9A7B45]
-          text-sm
+          font-[family-name:var(--font-cinzel-decorative)]
+          text-xs
+          md:text-sm
+          mb-8
           "
         >
           The Wedding Of
         </p>
 
+        {/* Foto + Frame */}
         <div
           className="
           relative
@@ -101,50 +134,66 @@ md:h-[420px]
             border-[#D4AF37]/20
             "
           />
+
+          
         </div>
 
+        {/* Divider */}
+        <img
+          src="/images/luxury/divider_hero.png"
+          alt=""
+          className="
+w-72
+md:w-96
+mx-auto
+mt-32
+relative
+left-2
+"
+        />
+
+        {/* Nama */}
         <h1
           className="
-          text-5xl
-          md:text-7xl
-          font-[Cormorant_Garamond]
+          text-4xl
+md:text-7xl
+          font-[family-name:var(--font-great-vibes)] font-bold
           text-[#9A7B45]
-          mt-48
           leading-tight
+          mt-0
           "
         >
+          <p
+  className="
+  uppercase
+  tracking-[5px]
+  text-zinc-400
+  font-[family-name:var(--font-cinzel-decorative)]
+  text-xs
+  mb-3
+  "
+>
+  Undangan Pernikahan
+</p>
           {groom}
           <br />
-          &
+          <span className="text-[#9A7B45]">&</span>
           <br />
           {bride}
         </h1>
-
-        {date && (
-          <p
-            className="
-            mt-6
-            text-[#9A7B45]
-            tracking-[4px]
-            uppercase
-            "
-          >
-            {date}
-          </p>
-        )}
-
         <img
-          src="/images/luxury/8.png"
+  src="/images/luxury/divider_hero_bottom.png"
           alt=""
           className="
-          w-40
-          mx-auto
-          mt-6
-          "
-        />
-
+w-72
+md:w-96
+mx-auto
+mt-4
+relative
+left-2
+"
+/>
       </div>
-
     </section>
   );
 }

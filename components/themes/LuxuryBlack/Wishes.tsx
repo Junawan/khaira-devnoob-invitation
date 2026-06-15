@@ -55,11 +55,14 @@ export default function LuxuryBlackWishes({
   }, [slug]);
 
   return (
-    <section className="bg-black py-24">
+    <section className="bg-black py-12">
 
       <div className="max-w-3xl mx-auto px-6">
 
-        <h2 className="text-center text-4xl font-[Cormorant_Garamond] text-yellow-400">
+        <h2 className="text-center text-4xl 
+        font-[family-name:var(--font-great-vibes)] 
+        font-bold 
+        text-yellow-400">
           Ucapan & Doa
         </h2>
 
@@ -84,11 +87,12 @@ export default function LuxuryBlackWishes({
               "
             >
 
-              <h3 className="text-yellow-300 font-semibold">
+              <h3 className="text-yellow-300 font-[family-name:var(--font-great-vibes)]">
                 {item.name}
               </h3>
 
-              <p className="text-zinc-300 mt-2">
+              <p className="text-zinc-300 mt-2
+              font-[family-name:var(--font-great-vibes)]">
                 {item.message}
               </p>
 

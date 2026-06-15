@@ -16,7 +16,7 @@ export default function LuxuryBlackGift({
 
 };
   return (
-  <section className="py-24 bg-black">
+  <section className="py-10 bg-black">
 
     <div className="max-w-3xl mx-auto px-6 text-center">
 
@@ -36,7 +36,7 @@ export default function LuxuryBlackGift({
 
       </div>
 
-      <h2 className="text-4xl font-[Cormorant_Garamond] text-yellow-400">
+      <h2 className="text-4xl font-[family-name:var(--font-great-vibes)] font-bold text-yellow-400">
         Amplop Digital
       </h2>
 

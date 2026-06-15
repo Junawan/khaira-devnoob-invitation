@@ -11,7 +11,7 @@ export default function elegantGoldGallery({
 
     <section
       className="
-      py-32
+      py-18
       px-5
       relative
       overflow-hidden
@@ -34,7 +34,8 @@ export default function elegantGoldGallery({
         className="
         text-4xl
         md:text-5xl
-        font-[Cormorant_Garamond]
+        font-[family-name:var(--font-great-vibes)]
+        font-bold
         text-center
         text-[#9A7B45]
         mb-16

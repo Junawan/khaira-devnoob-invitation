@@ -40,7 +40,7 @@ export default function LuxuryBlackLocation({
 
         </div>
 
-        <h2 className="text-4xl font-[Cormorant_Garamond] text-yellow-400">
+        <h2 className="text-4xl font-[family-name:var(--font-great-vibes)] font-bold text-yellow-400">
           Lokasi Acara
         </h2>
 
@@ -61,7 +61,10 @@ export default function LuxuryBlackLocation({
         >
 
           {resepsiPlace && (
-            <p className="text-zinc-300">
+            <p className="text-zinc-300
+            text-2xl
+md:text-2xl
+            font-[family-name:var(--font-pinyon-script)]">
               {resepsiPlace}
             </p>
           )}

@@ -20,35 +20,65 @@ export default function LuxuryBlackHero({
       text-center
       "
     >
-      {/* Corner kiri */}
-      <img
-        src="/images/luxury/corner_left.png"
-        alt=""
-        className="
-        absolute
-        top-0
-        left-0
-        w-24
-  md:w-36
-        opacity-60
-        pointer-events-none
-        "
-      />
+      {/* Corner */}
+      <div className="fixed inset-0 pointer-events-none z-0">
 
-      {/* Corner kanan */}
-      <img
-        src="/images/luxury/corner_right.png"
-        alt=""
-        className="
-        absolute
-        top-0
-        right-0
-        w-24
+        <img
+  src="/images/luxury/corner_left.png"
+  alt=""
+  className="
+  absolute
+  top-0
+  left-0
+  w-24
   md:w-36
-        opacity-60
-        pointer-events-none
-        "
-      />
+  opacity-60
+  "
+/>
+
+<img
+  src="/images/luxury/corner_right.png"
+  alt=""
+  className="
+  absolute
+  top-0
+  right-0
+  w-24
+  md:w-36
+  opacity-60
+  "
+/>
+
+<img
+  src="/images/luxury/corner_left_bottom.png"
+  alt=""
+  className="
+  fixed
+  bottom-0
+  left-0
+  w-24
+  md:w-36
+  opacity-60
+  pointer-events-none
+  z-0
+  "
+/>
+
+<img
+  src="/images/luxury/corner_right_bottom.png"
+  alt=""
+  className="
+  fixed
+  bottom-0
+  right-0
+  w-24
+  md:w-36
+  opacity-60
+  pointer-events-none
+  z-0
+  "
+/>
+</div>
 
       <div
         className="
@@ -73,6 +103,7 @@ export default function LuxuryBlackHero({
           uppercase
           tracking-[8px]
           text-yellow-500
+          font-[family-name:var(--font-cinzel-decorative)]
           text-xs
           md:text-sm
           mb-8
@@ -115,7 +146,7 @@ md:h-[420px]
 w-72
 md:w-96
 mx-auto
-mt-48
+mt-32
 relative
 left-2
 "
@@ -126,7 +157,7 @@ left-2
           className="
           text-4xl
 md:text-7xl
-          font-[Cormorant_Garamond]
+          font-[family-name:var(--font-great-vibes)] font-bold
           text-yellow-400
           leading-tight
           mt-0
@@ -137,6 +168,7 @@ md:text-7xl
   uppercase
   tracking-[5px]
   text-zinc-400
+  font-[family-name:var(--font-cinzel-decorative)]
   text-xs
   mb-3
   "
@@ -150,14 +182,16 @@ md:text-7xl
           {bride}
         </h1>
         <img
-  src="/images/luxury/3.png"
-  alt=""
-  className="
-  w-56
-  mx-auto
-  mt-6
-  opacity-80
-  "
+  src="/images/luxury/divider_hero_bottom.png"
+          alt=""
+          className="
+w-72
+md:w-96
+mx-auto
+mt-4
+relative
+left-2
+"
 />
       </div>
     </section>

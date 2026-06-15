@@ -127,7 +127,9 @@ text-center
 >
 
           <p
-  className={`uppercase tracking-[8px] text-xs ${
+  className={`uppercase tracking-[8px] 
+    font-[family-name:var(--font-cinzel-decorative)]
+    text-xs ${
     isLuxury
       ? "text-yellow-400"
       : "text-[#9A7B45]"
@@ -199,6 +201,7 @@ mt-6
   className="
   uppercase
   tracking-[5px]
+  font-[family-name:var(--font-cinzel-decorative)]
   text-zinc-400
   text-xs
   mb-4
@@ -211,7 +214,7 @@ mt-6
             className={`
             text-4xl
             md:text-6xl
-            font-serif
+           font-[family-name:var(--font-great-vibes)] font-bold
             mt-6
             ${
     isLuxury
@@ -226,6 +229,7 @@ mt-6
           <div
             className={`
             text-3xl
+            font-[family-name:var(--font-great-vibes)] font-bold
             my-2
             ${
   isLuxury
@@ -241,7 +245,7 @@ mt-6
             className={`
             text-4xl
             md:text-6xl
-            font-serif
+            font-[family-name:var(--font-great-vibes)] font-bold
             ${
     isLuxury
       ? "text-yellow-400"
@@ -302,7 +306,9 @@ px-8
 "
 >
 
-      <p className="text-yellow-300 tracking-[1px] text-sm">
+      <p className="text-yellow-300 tracking-[1px] 
+      font-[family-name:var(--font-pinyon-script)]
+      text-sm">
     Kepada Yth.
 </p>
 
@@ -310,7 +316,7 @@ px-8
 className="
 mt-2
 text-2xl
-font-serif
+font-[family-name:var(--font-great-vibes)]
 text-yellow-400
 leading-tight
 "

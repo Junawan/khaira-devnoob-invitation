@@ -16,7 +16,7 @@ export default function ElegantGoldGift({
 
 };
   return (
-  <section className="py-24">
+  <section className="py-10">
 
     <div className="max-w-3xl mx-auto px-6 text-center">
 
@@ -36,7 +36,10 @@ export default function ElegantGoldGift({
 
       </div>
 
-      <h2 className="text-4xl font-[Cormorant_Garamond] text-[#9A7B45]">
+      <h2 className="text-4xl 
+      font-[family-name:var(--font-great-vibes)] 
+      font-bold 
+      text-[#9A7B45]">
         Amplop Digital
       </h2>
 
@@ -58,19 +61,19 @@ export default function ElegantGoldGift({
         "
       >
 
-        <p className="text-white">
+        <p className="text-black">
           Transfer Bank
         </p>
 
-        <h3 className="text-black text-2xl mt-2">
+        <h3 className="text-yellow-300 font-bold text-2xl mt-2">
           {data.bankName}
         </h3>
 
-        <p className="text-white text-2xl font-semibold mt-4">
+        <p className="text-black text-2xl font-semibold mt-4">
           {data.accountNumber}
         </p>
 
-        <p className="text-white mt-2">
+        <p className="text-black">
           a.n. {data.accountName}
         </p>
 
@@ -81,8 +84,8 @@ export default function ElegantGoldGift({
           px-8
           py-3
           rounded-full
-          bg-[#9A7B45]
-          hover:bg-yellow-500
+          bg-yellow-600
+          hover:bg-[#9A7B45]
           text-white
           transition
           "
@@ -99,6 +102,7 @@ export default function ElegantGoldGift({
   max-w-md
   mx-auto
   bg-zinc-900/50
+  font-bold
   border
   border-yellow-500/20
   rounded-3xl
@@ -107,7 +111,7 @@ export default function ElegantGoldGift({
   "
 >
 
-          <h3 className="text-black text-2xl mb-5">
+          <h3 className="text-yellow-300 text-2xl mb-5">
   QRIS
 </h3>
 

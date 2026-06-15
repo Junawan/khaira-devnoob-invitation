@@ -101,7 +101,10 @@ export default function LuxuryBlackRsvp({
 
         </div>
 
-        <h2 className="text-4xl font-[Cormorant_Garamond] text-[#9A7B45]">
+        <h2 className="text-4xl 
+        font-[family-name:var(--font-great-vibes)]
+        font-bold
+        text-[#9A7B45]">
           Konfirmasi Kehadiran
         </h2>
 
@@ -122,13 +125,13 @@ export default function LuxuryBlackRsvp({
             }
             className="
               w-full
-              bg-zinc-900/50
+              bg-white
               border
               border-yellow-500/30
               rounded-xl
               px-4
               py-3
-              text-white
+              text-zinc-900
             "
           />
 
@@ -143,13 +146,13 @@ export default function LuxuryBlackRsvp({
             }
             className="
               w-full
-              bg-zinc-900/50
+              bg-white
               border
               border-yellow-500/30
               rounded-xl
               px-4
               py-3
-              text-white
+              text-zinc-900
             "
           />
 
@@ -162,13 +165,13 @@ export default function LuxuryBlackRsvp({
             }
             className="
               w-full
-              bg-zinc-900/50
+              bg-white
               border
               border-yellow-500/30
               rounded-xl
               px-4
               py-3
-              text-white
+              text-zinc-900
             "
           >
             <option value="hadir">
@@ -180,37 +183,61 @@ export default function LuxuryBlackRsvp({
             </option>
           </select>
 
-          <textarea
-  placeholder="Ucapan & Doa"
-  value={message}
-  onChange={(e) =>
-    setMessage(e.target.value)
-  }
+<p
   className="
-    w-full
-    bg-zinc-900/50
-    border
-    border-yellow-500/30
-    rounded-xl
-    px-4
-    py-3
-    text-white
-    min-h-[120px]
+  mt-2
+  text-zinc-500
+  text-sm
+  tracking-wide
+  "
+>
+  Tinggalkan doa dan harapan terbaik untuk kedua mempelai
+</p>
+
+          <textarea
+  placeholder="Tuliskan ucapan dan doa terbaik..."
+  value={message}
+  onChange={(e)=>setMessage(e.target.value)}
+  className="
+  w-full
+  min-h-[140px]
+  bg-white
+  border
+  border-yellow-500/20
+  rounded-xl
+  px-5
+  py-4
+  text-zinc-900
+  placeholder:text-zinc-500
+  leading-7
+  resize-none
+  focus:outline-none
+  focus:ring-2
+  focus:ring-yellow-500/40
+  transition
   "
 />
 
           <button
             onClick={handleSubmit}
             className="
-              w-full
-              py-4
-              rounded-xl
-              bg-[#9A7B45]
-              hover:bg-yellow-500
-              text-white
-              font-semibold
-              transition
-            "
+w-full
+py-4
+rounded-full
+bg-gradient-to-r
+from-[#9A7B45]
+via-yellow-600
+to-yellow-700
+text-white
+font-semibold
+tracking-wide
+shadow-lg
+shadow-yellow-900/30
+hover:scale-[1.02]
+hover:shadow-yellow-700/30
+transition
+duration-300
+"
           >
             Kirim RSVP
           </button>

@@ -55,11 +55,14 @@ export default function ElegantGoldWishes({
   }, [slug]);
 
   return (
-    <section className="py-24">
+    <section className="py-12">
 
       <div className="max-w-3xl mx-auto px-6">
 
-        <h2 className="text-center text-4xl font-[Cormorant_Garamond] text-[#9A7B45]">
+        <h2 className="text-center text-4xl 
+        font-[family-name:var(--font-great-vibes)] 
+        font-bold 
+        text-[#9A7B45]">
           Ucapan & Doa
         </h2>
 
@@ -78,17 +81,20 @@ export default function ElegantGoldWishes({
               className="
               border
               border-yellow-500/20
-              bg-zinc-900/50
+              bg-white
               rounded-2xl
               p-5
               "
             >
 
-              <h3 className="text-[#9A7B45] font-semibold">
+              <h3 className="text-yellow-300 
+              font-[family-name:var(--font-great-vibes)]
+              font-bold">
                 {item.name}
               </h3>
 
-              <p className="text-zinc-300 mt-2">
+              <p className="black mt-2
+              font-[family-name:var(--font-great-vibes)]">
                 {item.message}
               </p>
 

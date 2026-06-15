@@ -85,7 +85,10 @@ export default function Countdown({
         </div>
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-[Cormorant_Garamond] text-yellow-400">
+        <h2 className="text-4xl md:text-5xl 
+        font-[family-name:var(--font-great-vibes)]
+        font-bold
+        text-yellow-400">
           Menuju Hari Bahagia
         </h2>
 
@@ -97,7 +100,9 @@ export default function Countdown({
         />
 
         {/* Countdown */}
-        <div className="flex justify-center gap-4 md:gap-6 flex-wrap">
+        <div className="flex justify-center 
+        gap-4 md:gap-6 flex-wrap
+        ">
 
           <CountdownBox
             value={timeLeft.days}

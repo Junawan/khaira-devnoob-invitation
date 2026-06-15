@@ -8,13 +8,13 @@ export default function elegantGoldLoveStory({
     image?: string;
   }[];
 }) {
-  if (!stories?.length)
-    return null;
+
+  if (!stories?.length) return null;
 
   return (
-    <section className="py-24">
+    <section className="py-20">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
 
         <div className="text-center">
 
@@ -22,7 +22,6 @@ export default function elegantGoldLoveStory({
 
             <img
               src="/images/luxury/round_frame.png"
-              alt=""
               className="absolute inset-0 w-full h-full object-contain"
             />
 
@@ -34,112 +33,103 @@ export default function elegantGoldLoveStory({
 
           </div>
 
-          <h2 className="text-4xl font-[Cormorant_Garamond] text-[#9A7B45]">
+          <h2 className="text-4xl 
+          font-[family-name:var(--font-great-vibes)]
+          font-bold
+           text-[#9A7B45]">
             Love Story
           </h2>
 
-          {stories.length > 1 && (
-  <p
-    className="
-    text-zinc-500
-    text-sm
-    mt-3
-    tracking-widest
-    "
-  >
-    Geser untuk melihat perjalanan kami →
-  </p>
-)}
-
           <img
             src="/images/luxury/18.png"
-            alt=""
             className="w-56 mx-auto mt-4"
           />
 
         </div>
 
-        <div
-  className="
-  mt-16
-  flex
-  gap-6
-  justify-center
-  overflow-x-auto
-  snap-x
-  snap-mandatory
-  pb-6
-  scrollbar-hide
-  "
->
+        <div className="mt-14 space-y-10">
 
           {stories.map((story, index) => (
 
             <div
               key={index}
               className="
-              w-[320px]
-              snap-center
-              bg-zinc-900/50
+              bg-black
               border
               border-yellow-500/20
               rounded-3xl
-              p-5
-              flex-shrink-0
+              overflow-hidden
               "
             >
 
               {story.image && (
 
-                <img
-                  src={story.image}
-                  alt={story.title}
-                  className="
+                <div
+  className="
+  bg-black
+  flex
+  justify-center
+  items-center
+  p-5
+  "
+>
+  <img
+    src={story.image}
+    alt={story.title}
+    className="
 w-full
-h-48
-object-contain
+h-auto
 rounded-2xl
 border
 border-yellow-500/20
-mb-4
-bg-black
 "
-                />
+  />
+</div>
 
               )}
 
-              <p
-                className="
-                text-yellow-400
-                text-xs
-                tracking-[3px]
-                uppercase
-                "
-              >
-                {story.year}
-              </p>
+              <div className="p-8">
 
-              <h3
-                className="
-                text-xl
-                text-yellow-400
-                mt-2
-                font-semibold
-                "
-              >
-                {story.title}
-              </h3>
+                <p
+                  className="
+                  text-[#9A7B45]
+                  font-[family-name:var(--font-great-vibes)]
+                  font-bold
+                  tracking-[4px]
+                  uppercase
+                  text-xs
+                  "
+                >
+                  {story.year}
+                </p>
 
-              <p
-                className="
-                text-zinc-300
-                mt-3
-                leading-relaxed
-                text-sm
-                "
-              >
-                {story.description}
-              </p>
+                <h3
+                  className="
+                  text-3xl
+                  font-[family-name:var(--font-great-vibes)]
+                  font-bold
+                  text-[#9A7B45]
+                  mt-2
+                  "
+                >
+                  {story.title}
+                </h3>
+
+                <p
+                  className="
+                  text-zinc-300
+                  text-2xl
+md:text-2xl
+font-[family-name:var(--font-pinyon-script)]
+
+                  mt-5
+                  leading-8
+                  "
+                >
+                  {story.description}
+                </p>
+
+              </div>
 
             </div>
 

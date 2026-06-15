@@ -85,7 +85,10 @@ export default function Countdown({
         </div>
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-serif text-[#9A7B45]">
+        <h2 className="text-4xl md:text-5xl 
+        font-[family-name:var(--font-great-vibes)]
+        font-bold
+        text-[#9A7B45]">
           Menuju Hari Bahagia
         </h2>
 
@@ -97,7 +100,9 @@ export default function Countdown({
         />
 
         {/* Countdown */}
-        <div className="flex justify-center gap-4 md:gap-6 flex-wrap">
+        <div className="flex justify-center 
+        gap-4 md:gap-6 flex-wrap
+        ">
 
           <CountdownBox
             value={timeLeft.days}
@@ -149,7 +154,7 @@ function CountdownBox({
       md:h-28
       rounded-xl
       border
-      border-yellow-500/40
+      [#9A7B45]
       bg-white/[0.03]
       backdrop-blur-sm
       flex
@@ -163,7 +168,7 @@ function CountdownBox({
         {String(value).padStart(2, "0")}
       </div>
 
-      <div className="text-xs uppercase tracking-[3px] text-zinc-400 mt-2">
+      <div className="text-xs uppercase tracking-[3px] text-black mt-2">
         {label}
       </div>
     </div>
