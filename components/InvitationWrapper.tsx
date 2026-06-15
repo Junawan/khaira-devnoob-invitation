@@ -328,6 +328,7 @@ leading-tight
 className="
 mt-2
 text-zinc-300
+text-xs
 leading-4
 max-w-[220px]
 "
