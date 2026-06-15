@@ -118,8 +118,8 @@ border-yellow-500/20
                 <p
                   className="
                   text-zinc-300
-                  text-2xl
-md:text-2xl
+                  text-1xl
+md:text-1xl
 font-[family-name:var(--font-title)]
 
                   mt-5
