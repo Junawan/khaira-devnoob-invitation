@@ -120,7 +120,7 @@ border-yellow-500/20
                   text-zinc-300
                   text-2xl
 md:text-2xl
-font-[family-name:var(--font-pinyon-script)]
+font-[family-name:var(--font-title)]
 
                   mt-5
                   leading-8
