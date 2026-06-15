@@ -120,7 +120,7 @@ ${isLuxury
               alt=""
               className="
               absolute
-              top-0
+              top-[28%]
               left-[14%]
               w-[72%]
               h-[72%]
