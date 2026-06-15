@@ -76,7 +76,7 @@ ${isLuxury ? "bg-black" : "bg-[#faf8f3]"}
   className="
   absolute
   top-0
-  right-6
+  right-0
   w-24
   md:w-36
   opacity-60
@@ -104,7 +104,7 @@ ${isLuxury ? "bg-black" : "bg-[#faf8f3]"}
   className="
   fixed
   bottom-0
-  right-6
+  right-0
   w-24
   md:w-36
   opacity-60
