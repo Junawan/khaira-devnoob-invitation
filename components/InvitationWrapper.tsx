@@ -55,6 +55,8 @@ ${isLuxury ? "bg-black" : "bg-[#faf8f3]"}
 `}
       >
 
+        <div className="fixed inset-0 pointer-events-none z-0">
+
         <img
   src="/images/luxury/corner_left.png"
   alt=""
@@ -74,12 +76,43 @@ ${isLuxury ? "bg-black" : "bg-[#faf8f3]"}
   className="
   absolute
   top-0
-  right-0
+  right-6
   w-24
   md:w-36
   opacity-60
   "
 />
+
+<img
+  src="/images/luxury/corner_left_bottom.png"
+  alt=""
+  className="
+  fixed
+  bottom-0
+  left-0
+  w-24
+  md:w-36
+  opacity-60
+  pointer-events-none
+  z-0
+  "
+/>
+
+<img
+  src="/images/luxury/corner_right_bottom.png"
+  alt=""
+  className="
+  fixed
+  bottom-0
+  right-6
+  w-24
+  md:w-36
+  opacity-60
+  pointer-events-none
+  z-0
+  "
+/>
+</div>
 
         <div
 className="
@@ -275,8 +308,8 @@ px-8
 
 <h2
 className="
-mt-0
-text-1xl
+mt-2
+text-2xl
 font-serif
 text-yellow-400
 leading-tight
@@ -287,7 +320,7 @@ leading-tight
 
 <p
 className="
-mt-8
+mt-2
 text-zinc-300
 text-xs
 leading-4
