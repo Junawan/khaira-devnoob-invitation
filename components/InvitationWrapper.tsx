@@ -88,6 +88,7 @@ w-full
 max-w-lg
 mx-auto
 pb-10
+text-center
 "
 >
 
