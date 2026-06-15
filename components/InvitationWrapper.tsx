@@ -34,6 +34,7 @@ export default function InvitationWrapper({
 
     const isLuxury =
   theme === "luxury-black";
+  
 
   if (!opened) {
 
@@ -93,19 +94,14 @@ text-center
 >
 
           <p
-            className={`
-            uppercase
-            tracking-[8px]
-            text-xs${
+  className={`uppercase tracking-[8px] text-xs ${
     isLuxury
       ? "text-yellow-400"
       : "text-[#9A7B45]"
-  }
-`}
-            
-          >
-            The Wedding Of
-          </p>
+  }`}
+>
+  The Wedding Of
+</p>
 
           <div
 className="
@@ -127,7 +123,6 @@ className="
 absolute
 left-1/2
 top-1/2
--w-0
 -translate-x-1/2
 -translate-y-1/2
 w-[180px]
@@ -235,68 +230,95 @@ opacity-80
 "
 />
 
-          <div
-            className={`
-mt-4
-border
-rounded-3xl
-p-6
-${
-  isLuxury
-    ? `
-      bg-zinc-900/50
-      border-yellow-500/50
-      `
-    : `
-      bg-white
-      border-[#D4AF37]/60
-      shadow-lg
-      `
-}
-`}
-          >
+          <div className="mt-6 flex justify-center">
 
-            <p className={`
-            ${
-    isLuxury
-      ? "text-yellow-400"
-      : "text-black"
-  }
-`}>
-              Kepada Yth.
-            </p>
+  <div
+  className="
+  relative
+  w-[300px]
+  h-[220px]
+  sm:w-[340px]
+  sm:h-[250px]
+  "
+>
 
-            <h2
-              className={`
-              text-2xl
-              font-semibold
-              mt-8
-              ${
-    isLuxury
-      ? "text-yellow-400"
-      : "text-black"
-  }
-`}
-            >
-              {guestName || "Tamu Undangan"}
-            </h2>
+    <img
+      src="/images/luxury/17.png"
+      alt=""
+      className="
+      absolute
+      inset-0
+      w-full
+      h-full
+      object-contain
+      pointer-events-none
+      "
+    />
 
-            <p
-              className={`
-              text-xs
-              mt-3
-              ${
-    isLuxury
-      ? "text-yellow-400"
-      : "text-black"
-  }
-`}
-            >
-              Mohon maaf apabila terdapat
-              kesalahan penulisan nama.
-            </p>
+    <div
+      className="
+      absolute
+      inset-0
+      flex
+      flex-col
+      items-center
+      justify-center
+      px-12
+      text-center
+      "
+    >
 
-          </div>
+      <p
+        className={`
+        text-sm
+        tracking-[3px]
+        ${
+          isLuxury
+            ? "text-yellow-300"
+            : "text-[#9A7B45]"
+        }
+        `}
+      >
+        Kepada Yth.
+      </p>
+
+      <h2
+        className={`
+        mt-5
+        text-3xl
+        font-serif
+        ${
+          isLuxury
+            ? "text-yellow-400"
+            : "text-[#9A7B45]"
+        }
+        `}
+      >
+        {guestName || "Tamu Undangan"}
+      </h2>
+
+      <p
+        className={`
+        mt-5
+        text-xs
+        leading-relaxed
+        ${
+          isLuxury
+            ? "text-zinc-300"
+            : "text-gray-600"
+        }
+        `}
+      >
+        Mohon maaf apabila terdapat
+        <br />
+        kesalahan penulisan nama.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
 
           <button
             onClick={() => {
