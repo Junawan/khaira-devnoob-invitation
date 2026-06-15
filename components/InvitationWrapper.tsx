@@ -151,7 +151,7 @@ ${isLuxury
   className="
   w-72
   mx-auto
-  -mt-8
+  mt-8
   "
 />
 
