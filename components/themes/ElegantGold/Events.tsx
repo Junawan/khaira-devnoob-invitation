@@ -74,13 +74,14 @@ export default function ElegantGoldEvents({
             items-center
             text-center
             px-10
+            -mt-6
             "
           >
 
             <h3
               className="text-yellow-300 tracking-[3px] 
       font-[family-name:var(--font-pinyon-script)]
-      text-sm"
+      text-[26px]"
             >
               Akad Nikah
             </h3>
@@ -128,13 +129,14 @@ leading-tight
             items-center
             text-center
             px-10
+            -mt-6
             "
           >
 
             <h3
               className="text-yellow-300 tracking-[3px] 
       font-[family-name:var(--font-pinyon-script)]
-      text-sm"
+      text-[26px]"
             >
               Resepsi
             </h3>
