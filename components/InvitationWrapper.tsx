@@ -256,63 +256,48 @@ opacity-80
     />
 
     <div
-      className="
-      absolute
-      inset-0
-      flex
-      flex-col
-      items-center
-      justify-center
-      px-12
-      text-center
-      "
-    >
+className="
+absolute
+left-0
+right-0
+top-[28%]
+flex
+flex-col
+items-center
+text-center
+px-8
+"
+>
 
-      <p
-        className={`
-        text-sm
-        tracking-[3px]
-        ${
-          isLuxury
-            ? "text-yellow-300"
-            : "text-[#9A7B45]"
-        }
-        `}
-      >
-        Kepada Yth.
-      </p>
+      <p className="text-yellow-300 tracking-[1px] text-sm">
+    Kepada Yth.
+</p>
 
-      <h2
-        className={`
-        mt-5
-        text-3xl
-        font-serif
-        ${
-          isLuxury
-            ? "text-yellow-400"
-            : "text-[#9A7B45]"
-        }
-        `}
-      >
-        {guestName || "Tamu Undangan"}
-      </h2>
+<h2
+className="
+mt-0
+text-1xl
+font-serif
+text-yellow-400
+leading-tight
+"
+>
+{guestName || "Tamu Undangan"}
+</h2>
 
-      <p
-        className={`
-        mt-5
-        text-xs
-        leading-relaxed
-        ${
-          isLuxury
-            ? "text-zinc-300"
-            : "text-gray-600"
-        }
-        `}
-      >
-        Mohon maaf apabila terdapat
-        <br />
-        kesalahan penulisan nama.
-      </p>
+<p
+className="
+mt-8
+text-zinc-300
+text-xs
+leading-4
+max-w-[220px]
+"
+>
+Mohon maaf apabila terdapat
+<br />
+kesalahan penulisan nama.
+</p>
 
     </div>
 
