@@ -35,6 +35,9 @@ export default function InvitationWrapper({
     const isLuxury =
   theme === "luxury-black";
 
+  const FRAME = 320;
+const PHOTO = 220;
+
   if (!opened) {
 
     return (
@@ -56,12 +59,11 @@ ${isLuxury
 
         <img
   src="/images/luxury/corner_left.png"
-  alt=""
   className="
   absolute
   top-0
   left-0
-  w-24
+  w-20
   md:w-36
   opacity-60
   "
@@ -69,12 +71,11 @@ ${isLuxury
 
 <img
   src="/images/luxury/corner_right.png"
-  alt=""
   className="
   absolute
   top-0
   right-0
-  w-24
+  w-20
   md:w-36
   opacity-60
   "
@@ -106,44 +107,33 @@ ${isLuxury
           </p>
 
           <div
-            className="
-            relative
-            w-72
-            h-72
-            mx-auto
-            mt-8
-            "
-          >
+  style={{
+    width: FRAME,
+    height: FRAME,
+  }}
+  className="relative mx-auto mt-8"
+>
 
-            <img
-              src={coverImage}
-              alt=""
-              className="
-              absolute
-              top-[28%]
-              left-[14%]
-              w-[72%]
-              h-[72%]
-              rounded-full
-              object-cover
-              "
-            />
+  <div className="absolute inset-0 flex items-center justify-center">
 
-            <img
-  src="/images/luxury/round_frame.png"
-  alt=""
-  className="
-  absolute
-  inset-0
-  top-[14%]
-  w-full
-  h-full
-  object-contain
-  pointer-events-none
-  "
-/>
+    <img
+      src={coverImage}
+      alt=""
+      style={{
+        width: PHOTO,
+        height: PHOTO,
+      }}
+      className="rounded-full object-cover"
+    />
 
-          </div>
+  </div>
+
+  <img
+    src="/images/luxury/round_frame.png"
+    className="absolute inset-0 w-full h-full object-contain"
+  />
+
+</div>
 
           <img
   src="/images/luxury/divider_hero.png"
