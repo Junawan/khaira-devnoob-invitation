@@ -45,8 +45,9 @@ const PHOTO = 220;
       <div
         className={`
 fixed inset-0
-flex items-center
+flex
 justify-center
+items-start
 overflow-auto
 z-50
 px-5
@@ -128,10 +129,10 @@ ${isLuxury
 
   </div>
 
-  {/*<img
+  <img
     src="/images/luxury/round_frame.png"
     className="absolute inset-0 w-full h-full object-contain"
-  />*/}
+  />
 
 </div>
 
