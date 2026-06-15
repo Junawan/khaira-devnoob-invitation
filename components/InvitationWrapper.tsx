@@ -120,7 +120,7 @@ ${isLuxury
               alt=""
               className="
               absolute
-              top-[14%]
+              top-0
               left-[14%]
               w-[72%]
               h-[72%]
@@ -135,7 +135,6 @@ ${isLuxury
   className="
   absolute
   inset-0
-  top-0
   w-full
   h-full
   object-contain
