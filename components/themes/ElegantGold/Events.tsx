@@ -78,7 +78,7 @@ export default function ElegantGoldEvents({
           >
 
             <h3
-              className="text-yellow-300 tracking-[3px] 
+              className="text-yellow-300 tracking-[5px] 
       font-[family-name:var(--font-pinyon-script)]
       text-sm"
             >
@@ -86,8 +86,8 @@ export default function ElegantGoldEvents({
             </h3>
 
             <div className="
-mt-2
-text-2xl
+mt-1
+text-1xl
 font-[family-name:var(--font-great-vibes)]
 text-yellow-400
 leading-tight
