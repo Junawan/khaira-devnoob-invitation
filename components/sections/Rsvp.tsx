@@ -73,7 +73,7 @@ export default function LuxuryBlackRsvp({
 };
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-10 overflow-hidden">
 
       <div className="max-w-xl mx-auto px-6 text-center">
 

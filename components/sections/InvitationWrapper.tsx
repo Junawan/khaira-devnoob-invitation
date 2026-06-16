@@ -103,12 +103,6 @@ md:h-[340px]
 src={coverImage}
 className="
 absolute
-left-1/2
-top-1/2
--translate-x-1/2
--translate-y-1/2
-w-[180px]
-h-[180px]
 sm:w-[205px]
 sm:h-[205px]
 md:w-[235px]
@@ -116,6 +110,12 @@ md:h-[235px]
 rounded-full
 object-cover
 "
+style={{
+  top: theme.wrapper.photo.top,
+  left: theme.wrapper.photo.left,
+  width: theme.wrapper.photo.size,
+  height: theme.wrapper.photo.size,
+}}
 />
 
             <img

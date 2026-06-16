@@ -16,7 +16,7 @@ export default function Couple({
     id="couple"
 className="
 relative
-py-12
+py-8
 px-5
 overflow-hidden
 "
@@ -99,17 +99,16 @@ ${theme.text.primary}
   "
 >
   <img
-    src={data.groomImage}
-    alt=""
-    className="
-    absolute
-    inset-[15%]
-w-[70%]
-h-[70%]
-    rounded-full
-    object-cover
-    "
-  />
+  src={data.groomImage}
+  className="absolute rounded-full object-cover"
+  style={{
+  top: theme.couple.photo.top,
+  left: theme.couple.photo.left,
+  width: theme.couple.photo.size,
+  height: theme.couple.photo.size,
+  
+}}
+/>
 
   <img
     src={theme.couple.photoFrame}
@@ -170,9 +169,9 @@ md:text-2xl
             Ibu {data.groomMother}
           </p>
 
-          <div className="mt-20 text-center">
+          <div className="mt-10 text-center">
   <img
-    src="/images/luxury/3.png"
+    src={theme.couple.titleOrnament}
     alt=""
     className="
     w-72
@@ -215,15 +214,14 @@ opacity-80
 >
   <img
     src={data.brideImage}
-    alt=""
-    className="
-    absolute
-    inset-[15%]
-w-[70%]
-h-[70%]
-    rounded-full
-    object-cover
-    "
+    className="absolute rounded-full object-cover"
+  style={{
+  top: theme.couple.photo.top,
+  left: theme.couple.photo.left,
+  width: theme.couple.photo.size,
+  height: theme.couple.photo.size,
+  
+}}
   />
 
   <img
@@ -285,7 +283,7 @@ md:text-2xl
             Ibu {data.brideMother}
           </p>
 
-          <div className="mt-20 text-center">
+          <div className="mt-10 text-center">
   <img
     src={theme.couple.divider}
     alt=""

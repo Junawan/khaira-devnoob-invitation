@@ -128,7 +128,7 @@ export default function Countdown({
     <section
       className="
       relative
-      py-24
+      py-10
       overflow-hidden
       "
     >

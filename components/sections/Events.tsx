@@ -16,7 +16,7 @@ export default function Events({
     id="events"
 className="
 relative
-py-18
+py-10
 px-5
 overflow-hidden
 "
@@ -89,7 +89,7 @@ ${theme.text.primary}
             <h3
               className={`
 tracking-[3px]
-text-[26px]
+text-[22px]
 ${theme.font.title}
 ${theme.text.primary}
 `}
@@ -98,7 +98,7 @@ ${theme.text.primary}
             </h3>
 
             <div className={`
-mt-1
+-mt-1
 leading-tight
 text-xl
 ${theme.font.script}
@@ -147,7 +147,7 @@ ${theme.text.accent}
             <h3
               className={`
 tracking-[3px]
-text-[26px]
+text-[22px]
 ${theme.font.title}
 ${theme.text.primary}
 `}
@@ -156,7 +156,7 @@ ${theme.text.primary}
             </h3>
 
             <div className={`
-mt-1
+-mt-1
 leading-tight
 text-xl
 ${theme.font.script}
@@ -177,7 +177,7 @@ ${theme.text.accent}
 
       </div>
 
-      <div className="mt-20 text-center">
+      <div className="mt-10 text-center">
   <img
     src={theme.events.bottomDivider}
     alt=""

@@ -98,7 +98,7 @@ className="
 w-72
 md:w-96
 mx-auto
-mt-24
+mt-28
 "
 />
 
@@ -117,7 +117,7 @@ className={`
 uppercase
 tracking-[5px]
 text-xs
-mb-3
+mb-6
 ${theme.text.secondary}
 ${theme.font.heading}
 `}
@@ -146,7 +146,7 @@ className="
 w-72
 md:w-96
 mx-auto
-mt-24
+mt-4
 "
 />
 

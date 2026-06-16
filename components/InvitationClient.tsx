@@ -12,12 +12,6 @@ import {
   db,
 } from "@/lib/firebase";
 
-import LuxuryBlack
-from "./themes/LuxuryBlack";
-
-import ElegantGold
-from "./themes/ElegantGold";
-
 import Events from "@/components/sections/Events";
 
 import Hero

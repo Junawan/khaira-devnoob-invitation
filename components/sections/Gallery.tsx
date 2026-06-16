@@ -25,7 +25,7 @@ const theme = useTheme();
     <section
     id="gallery"
       className="
-      py-18
+      py-4
       px-5
       relative
       overflow-hidden
@@ -63,7 +63,7 @@ const theme = useTheme();
         mx-auto
         grid
         md:grid-cols-3
-        gap-8
+        gap-6
         "
       >
 

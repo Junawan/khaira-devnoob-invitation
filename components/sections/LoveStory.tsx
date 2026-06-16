@@ -23,7 +23,7 @@ export default function LoveStory({
     <section
     id="story"
 className="
-py-20
+py-10
 relative
 "
 >

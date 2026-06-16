@@ -14,7 +14,7 @@ export default function LuxuryBlackLocation({
 
   const theme = useTheme();
   return (
-    <section id="location" className="relative py-24 overflow-hidden">
+    <section id="location" className="relative py-10 overflow-hidden">
 
       <div className="max-w-4xl mx-auto px-6 text-center">
 

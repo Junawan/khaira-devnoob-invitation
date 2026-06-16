@@ -11,7 +11,7 @@ export default function Opening() {
 <section
 className="
 relative
-py-20
+py-10
 "
 >
 
@@ -49,7 +49,7 @@ alt=""
 className="
 w-56
 mx-auto
-my-4
+my-2
 "
 />
 

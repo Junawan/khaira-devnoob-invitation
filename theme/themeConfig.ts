@@ -54,6 +54,13 @@ guestName:
 guestNote:
 "text-zinc-300",
 
+photo: {
+  top: "16%",
+  left: "16%",
+  size: "68%",
+  inset:"16%",
+},
+
 },
 
     hero: {
@@ -88,6 +95,13 @@ couple: {
 
   photoFrame:
     "/images/luxury/round_frame.png",
+
+    photo: {
+  top: "16%",
+  left: "16%",
+  size: "68%",
+  inset:"16%",
+  },
 
 },
 
@@ -329,6 +343,13 @@ guestName:
 guestNote:
 "text-[#7A6A52]",
 
+photo: {
+  top: "15%",
+  left: "10%",
+  size: "80%",
+  inset:"12%",
+},
+
 },
 
   hero: {
@@ -362,6 +383,13 @@ divider:
 
 photoFrame:
 "/images/elegant/frame.png",
+
+photo: {
+  top: "20%",
+  left: "15%",
+  size: "70%",
+  inset:"10%",
+}
 
 },
 
