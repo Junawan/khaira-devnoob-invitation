@@ -20,7 +20,7 @@ export default function LuxuryBlackGift({
 
 };
   return (
-  <section className="py-10">
+  <section id="gift" className="py-10">
 
     <div className="max-w-3xl mx-auto px-6 text-center">
 

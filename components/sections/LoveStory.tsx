@@ -21,6 +21,7 @@ export default function LoveStory({
 
   return (
     <section
+    id="story"
 className="
 py-20
 relative

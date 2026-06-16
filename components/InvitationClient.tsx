@@ -30,7 +30,7 @@ import Couple
 from "@/components/sections/Couple";
 
 import InvitationWrapper
-from "./InvitationWrapper";
+from "./sections/InvitationWrapper";
 
 import { useEffect } from "react";
 
@@ -59,6 +59,9 @@ import { ThemeProvider } from "@/theme/ThemeProvider";
 
 import ThemeLayout
 from "@/components/common/ThemeLayout";
+
+import Reveal
+from "@/components/common/Reveal";
 
 export default function InvitationClient({
   slug,
@@ -131,28 +134,21 @@ export default function InvitationClient({
     );
   }
 
-  const ThemeWrapper =
-  data.theme ===
-  "luxury-black"
-    ? LuxuryBlack
-    : ElegantGold;
-
     const isLuxury =
   data.theme === "luxury-black";
 
   console.log("DATA INVITATION:", data);
 
   return (
+  <ThemeProvider theme={data.theme}>
 
-  <InvitationWrapper
+    <InvitationWrapper
   groom={data.groom}
   bride={data.bride}
   guestName={guestName || ""}
   coverImage={data.coverImage}
-  theme={data.theme}
   musicUrl={data.musicUrl}
 >
-  <ThemeProvider theme={data.theme}>
 
     <ThemeLayout>
 
@@ -167,23 +163,46 @@ bride={data.bride}
 coverImage={data.coverImage}
 />
 
-<Opening />
+<Reveal>
 
-<Couple data={data} />
+    <Opening />
+
+</Reveal>
+
+<Reveal delay={0.1}>
+
+    <Couple data={data} />
+
+</Reveal>
+
+<Reveal delay={0.15}>
 
 <LoveStory stories={data.loveStory}
 />
 
+</Reveal>
+
+     <Reveal delay={0.2}>
+
     <Events data={data}/>
+
+</Reveal>
+
+<Reveal direction="scale">
 
     <Gallery
   gallery={data.gallery}
 />
 
-<Countdown
+</Reveal>
+
+<Reveal>
+
+    <Countdown
   targetDate={data.date}
 />
 
+</Reveal>
 <Rsvp slug={slug} />
 
 <Wishes
@@ -196,9 +215,13 @@ coverImage={data.coverImage}
   resepsiPlace={data.resepsiPlace}
 />
 
+<Reveal direction="up">
+
     <Gift
     data={data}
 />
+
+</Reveal>
   </>
 
 ) : (
@@ -210,22 +233,46 @@ bride={data.bride}
 coverImage={data.coverImage}
 />
 
-<Opening />
+<Reveal>
 
-<Couple data={data} />
+    <Opening />
+
+</Reveal>
+
+<Reveal delay={0.1}>
+
+    <Couple data={data} />
+
+</Reveal>
+
+<Reveal delay={0.15}>
 
 <LoveStory stories={data.loveStory}
 />
 
-  <Events data={data}/>
+</Reveal>
 
- <Gallery
+  <Reveal delay={0.2}>
+
+    <Events data={data}/>
+
+</Reveal>
+
+ <Reveal direction="scale">
+
+    <Gallery
   gallery={data.gallery}
 />
 
-<Countdown
+</Reveal>
+
+<Reveal>
+
+    <Countdown
   targetDate={data.date}
 />
+
+</Reveal>
 
 <Rsvp slug={slug} />
 
@@ -239,17 +286,21 @@ coverImage={data.coverImage}
   resepsiPlace={data.resepsiPlace}
 />
 
-<Gift
+<Reveal direction="up">
+
+    <Gift
     data={data}
 />
+
+</Reveal>
 </>
 
 )}
     </main>
     </ThemeLayout>
 
-</ThemeProvider>
+    </InvitationWrapper>
 
- </InvitationWrapper>
+</ThemeProvider>
   );
 }

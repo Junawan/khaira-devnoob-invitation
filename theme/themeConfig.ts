@@ -22,6 +22,40 @@ frameTitle: "text-yellow-300",
   frameContent: "text-yellow-400",
     },
 
+    wrapper: {
+
+background:
+"bg-black",
+
+coverFrame:
+"/images/luxury/round_frame.png",
+
+heroDivider:
+"/images/luxury/divider_hero.png",
+
+bottomDivider:
+"/images/luxury/3.png",
+
+guestFrame:
+"/images/luxury/17.png",
+
+button:
+"bg-yellow-600 hover:bg-yellow-500",
+
+subtitle:
+"text-yellow-400",
+
+guestTitle:
+"text-yellow-300",
+
+guestName:
+"text-yellow-400",
+
+guestNote:
+"text-zinc-300",
+
+},
+
     hero: {
       topOrnament: "/images/luxury/8.png",
       divider: "/images/luxury/divider_hero.png",
@@ -207,6 +241,25 @@ gift: {
     "mt-6 px-8 py-3 rounded-full bg-yellow-600 hover:bg-yellow-500 text-white transition",
 },
 
+bottomNav: {
+
+  background:
+    "bg-black/75",
+
+  border:
+    "border-yellow-500/20",
+
+  icon:
+    "text-yellow-400",
+
+  active:
+    "bg-yellow-500 text-black",
+
+  shadow:
+    "shadow-[0_0_25px_rgba(234,179,8,0.18)]",
+
+},
+
     backgroundCorner: {
       topLeft:
         "/images/luxury/corner_left.png",
@@ -243,6 +296,40 @@ gift: {
     frameTitle: "text-yellow-300",
   frameContent: "text-yellow-400",
   },
+
+  wrapper: {
+
+background:
+"bg-[#faf8f3]",
+
+coverFrame:
+"/images/elegant/frame.png",
+
+heroDivider:
+"/images/elegant/divider1.png",
+
+bottomDivider:
+"/images/elegant/divider2.png",
+
+guestFrame:
+"/images/elegant/frame.png",
+
+button:
+"bg-[#9A7B45] hover:bg-[#b38d4c]",
+
+subtitle:
+"text-[#9A7B45]",
+
+guestTitle:
+"text-[#A67C52]",
+
+guestName:
+"text-[#9A7B45]",
+
+guestNote:
+"text-[#7A6A52]",
+
+},
 
   hero: {
   topOrnament: "/images/elegant/divider1.png",
@@ -436,6 +523,25 @@ divider:
 
   button:
     "mt-6 px-8 py-3 rounded-full bg-[#9A7B45] hover:bg-[#876c3d] text-white transition",
+},
+
+bottomNav: {
+
+  background:
+    "bg-white/90",
+
+  border:
+    "border-[#D4AF37]/30",
+
+  icon:
+    "text-[#9A7B45]",
+
+  active:
+    "bg-[#9A7B45] text-white",
+
+  shadow:
+    "shadow-lg",
+
 },
 
   backgroundCorner:{

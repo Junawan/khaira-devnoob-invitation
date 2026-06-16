@@ -3,19 +3,21 @@
 import { useState } from "react";
 
 import AudioPlayer
-from "./AudioPlayer";
+from "../AudioPlayer";
 
 import MusicButton
-from "./MusicButton";
+from "../MusicButton";
 
 import ThemeBackground from "@/components/common/ThemeBackground";
+
+import { useTheme } from "@/theme/ThemeProvider";
+import BottomNavigation from "../common/BottomNavigation";
 
 export default function InvitationWrapper({
   groom,
   bride,
   guestName,
   coverImage,
-  theme,
   children,
   musicUrl,
 }: {
@@ -23,19 +25,19 @@ export default function InvitationWrapper({
   bride: string;
   guestName: string;
   coverImage: string;
-  theme: string;
   children: React.ReactNode;
   musicUrl: string;
 }) {
+
+  const theme = useTheme();
+
+console.log("CURRENT THEME:", theme);
 
   const [opened, setOpened] =
     useState(false);
 
   const [isPlaying, setIsPlaying] =
     useState(false);
-
-    const isLuxury =
-  theme === "luxury-black";
   
 
   if (!opened) {
@@ -53,7 +55,7 @@ pb-10
 flex
 justify-center
 items-start
-${isLuxury ? "bg-black" : "bg-[#faf8f3]"}
+${theme.wrapper.background}
 `}
       >
 
@@ -77,11 +79,8 @@ text-center
           <p
   className={`uppercase tracking-[8px] 
     font-[family-name:var(--font-cinzel-decorative)]
-    text-xs ${
-    isLuxury
-      ? "text-yellow-400"
-      : "text-[#9A7B45]"
-  }`}
+    text-xs 
+    ${theme.wrapper.subtitle}`}
 >
   The Wedding Of
 </p>
@@ -120,7 +119,7 @@ object-cover
 />
 
             <img
-src="/images/luxury/round_frame.png"
+src={theme.wrapper.coverFrame}
 className="
 absolute
 inset-0
@@ -134,7 +133,7 @@ pointer-events-none
           </div>
 
           <img
-  src="/images/luxury/divider_hero.png"
+  src={theme.wrapper.heroDivider}
   alt=""
   className="
 w-56
@@ -146,14 +145,14 @@ mt-6
 />
 
 <p
-  className="
-  uppercase
-  tracking-[5px]
-  font-[family-name:var(--font-cinzel-decorative)]
-  text-zinc-400
-  text-xs
-  mb-4
-  "
+className={`
+uppercase
+tracking-[5px]
+text-xs
+mb-4
+${theme.font.heading}
+${theme.text.secondary}
+`}
 >
   Undangan Pernikahan
 </p>
@@ -164,11 +163,7 @@ mt-6
             md:text-6xl
            font-[family-name:var(--font-great-vibes)] font-bold
             mt-6
-            ${
-    isLuxury
-      ? "text-yellow-400"
-      : "text-[#9A7B45]"
-  }
+            ${theme.wrapper.guestTitle}
 `}
           >
             {groom}
@@ -179,11 +174,7 @@ mt-6
             text-3xl
             font-[family-name:var(--font-great-vibes)] font-bold
             my-2
-            ${
-  isLuxury
-    ? "text-yellow-400"
-    : "text-[#9A7B45]"
-}
+            ${theme.wrapper.guestTitle}
             `}
           >
             &
@@ -194,18 +185,14 @@ mt-6
             text-4xl
             md:text-6xl
             font-[family-name:var(--font-great-vibes)] font-bold
-            ${
-    isLuxury
-      ? "text-yellow-400"
-      : "text-[#9A7B45]"
-  }
+            ${theme.wrapper.guestTitle}
 `}
           >
             {bride}
           </h1>
 
           <img
-  src="/images/luxury/3.png"
+  src={theme.wrapper.bottomDivider}
   alt=""
   className="
 w-72
@@ -228,7 +215,7 @@ opacity-80
 >
 
     <img
-      src="/images/luxury/17.png"
+      src={theme.wrapper.guestFrame}
       alt=""
       className="
       absolute
@@ -254,32 +241,37 @@ px-8
 "
 >
 
-      <p className="text-yellow-300 tracking-[1px] 
-      font-[family-name:var(--font-pinyon-script)]
-      text-sm">
+      <p
+className={`
+tracking-[1px]
+text-sm
+${theme.font.script}
+${theme.wrapper.guestTitle}
+`}
+>
     Kepada Yth.
 </p>
 
 <h2
-className="
+className={`
 mt-2
 text-2xl
 font-[family-name:var(--font-great-vibes)]
-text-yellow-400
+${theme.wrapper.guestName}
 leading-tight
-"
+`}
 >
 {guestName || "Tamu Undangan"}
 </h2>
 
 <p
-className="
+className={`
 mt-2
-text-zinc-300
-text-[10px]
+${theme.wrapper.guestNote}
+text-[8px]
 leading-4
 max-w-[220px]
-"
+`}
 >
 Mohon maaf apabila terdapat
 <br />
@@ -308,11 +300,7 @@ rounded-full
 text-white
 font-semibold
 transition
-${
-  isLuxury
-    ? "bg-yellow-600 hover:bg-yellow-500"
-    : "bg-[#9A7B45] hover:bg-[#b38d4c]"
-}
+${theme.wrapper.button}
 `}
           >
             Buka Undangan
@@ -341,6 +329,7 @@ ${
         }
       />
 
+<BottomNavigation />
       
         {children}
       

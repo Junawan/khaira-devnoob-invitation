@@ -13,6 +13,7 @@ export default function Events({
   const theme = useTheme();
   return (
     <section
+    id="events"
 className="
 relative
 py-18

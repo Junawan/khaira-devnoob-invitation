@@ -21,6 +21,8 @@ export function ThemeProvider({
   children:React.ReactNode;
 }){
 
+  console.log("THEME PROP:", theme);
+
   const currentTheme =
     themes[
       theme as ThemeName

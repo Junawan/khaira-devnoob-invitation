@@ -23,6 +23,7 @@ const theme = useTheme();
   return (
 
     <section
+    id="gallery"
       className="
       py-18
       px-5
