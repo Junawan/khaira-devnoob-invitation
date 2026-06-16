@@ -1,21 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-import {
-  collection,
-  getDocs,
-  orderBy,
-  query,
-} from "firebase/firestore";
-
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { useTheme } from "@/theme/ThemeProvider";
 
 export default function LuxuryBlackWishes({
   slug,
 }: {
   slug: string;
 }) {
+
+  const theme = useTheme();
 
   const [messages, setMessages] =
     useState<any[]>([]);
@@ -55,19 +51,23 @@ export default function LuxuryBlackWishes({
   }, [slug]);
 
   return (
-    <section className="bg-black py-12">
+    <section className="py-12">
 
       <div className="max-w-3xl mx-auto px-6">
 
-        <h2 className="text-center text-4xl 
-        font-[family-name:var(--font-great-vibes)] 
-        font-bold 
-        text-yellow-400">
-          Ucapan & Doa
-        </h2>
+        <h2
+className={`
+text-center
+text-4xl
+${theme.font.title}
+${theme.text.primary}
+`}
+>
+  {theme.wishes.title}
+</h2>
 
         <img
-          src="/images/luxury/18.png"
+          src={theme.wishes.divider}
           alt=""
           className="w-56 mx-auto my-6"
         />
@@ -78,21 +78,21 @@ export default function LuxuryBlackWishes({
 
             <div
               key={item.id}
-              className="
-              border
-              border-yellow-500/20
-              bg-zinc-900/50
-              rounded-2xl
-              p-5
-              "
+              className={theme.wishes.card}
             >
 
-              <h3 className="text-yellow-300 font-[family-name:var(--font-great-vibes)]">
+              <h3 className={`
+${theme.font.title}
+${theme.wishes.name}
+`}>
                 {item.name}
               </h3>
 
-              <p className="text-zinc-300 mt-2
-              font-[family-name:var(--font-great-vibes)]">
+              <p className={`
+mt-2
+${theme.font.body}
+${theme.wishes.message}
+`}>
                 {item.message}
               </p>
 

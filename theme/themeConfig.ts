@@ -1,0 +1,458 @@
+export const themes = {
+  "luxury-black": {
+    background: "bg-black",
+
+    font: {
+      title:
+        "font-[family-name:var(--font-great-vibes)] font-bold",
+      heading:
+        "font-[family-name:var(--font-cinzel-decorative)]",
+        script:
+"font-[family-name:var(--font-pinyon-script)]",
+
+body:"font-[family-name:var(--font-title)]"
+    },
+
+    text: {
+      primary: "text-yellow-400",
+      secondary: "text-zinc-400",
+      accent: "text-yellow-500",
+body:"text-zinc-300",
+frameTitle: "text-yellow-300",
+  frameContent: "text-yellow-400",
+    },
+
+    hero: {
+      topOrnament: "/images/luxury/8.png",
+      divider: "/images/luxury/divider_hero.png",
+      dividerBottom:
+        "/images/luxury/divider_hero_bottom.png",
+    },
+
+    opening:{
+
+ornament:"/images/luxury/18.png"
+
+},
+
+couple: {
+
+  leftOrnament:
+    "/images/luxury/5.png",
+
+  rightOrnament:
+    "/images/luxury/7.png",
+
+  titleOrnament:
+    "/images/luxury/12.png",
+
+  centerImage:
+    "/images/luxury/8.png",
+
+  divider:
+    "/images/luxury/3.png",
+
+  photoFrame:
+    "/images/luxury/round_frame.png",
+
+},
+
+loveStory: {
+
+frame:
+"/images/luxury/round_frame.png",
+
+divider:
+"/images/luxury/18.png",
+
+icon: "❤",
+
+ iconColor: "text-yellow-400",
+
+card:
+"bg-zinc-900/50 border border-yellow-500/20",
+
+imageWrapper:
+"bg-black",
+
+imageBorder:
+"border-yellow-500/20",
+
+},
+
+events:{
+
+titleDivider:
+"/images/luxury/18.png",
+
+frame:
+"/images/luxury/17.png",
+
+bottomDivider:
+"/images/luxury/3.png",
+
+},
+
+gallery: {
+  title: "Gallery",
+
+  divider: "/images/luxury/18.png",
+
+  card:
+    "bg-zinc-900 border border-yellow-500/40 shadow-[0_0_20px_rgba(234,179,8,0.08)]",
+},
+
+countdown: {
+  title: "Menuju Hari Bahagia",
+
+  frame: "/images/luxury/round_frame.png",
+
+  divider: "/images/luxury/18.png",
+
+  heartColor: "text-yellow-400",
+
+  card:
+    "border border-yellow-500/40 bg-white/[0.03] backdrop-blur-sm shadow-[0_0_25px_rgba(234,179,8,0.08)]",
+
+  number: "text-yellow-400",
+
+  label: "text-zinc-400",
+},
+
+rsvp: {
+  title: "Konfirmasi Kehadiran",
+
+  frame: "/images/luxury/round_frame.png",
+
+  divider: "/images/luxury/18.png",
+
+  icon: "✦",
+
+  iconColor: "text-yellow-400",
+
+  input:
+    "w-full bg-zinc-900 border border-yellow-500/30 rounded-xl px-4 py-3 text-white",
+
+  textarea:
+    "w-full min-h-[140px] bg-[#111] border border-yellow-500/20 rounded-xl px-5 py-4 text-zinc-100 placeholder:text-zinc-500 leading-7 resize-none focus:outline-none focus:ring-2 focus:ring-yellow-500/40 transition",
+
+  button:
+    "w-full py-4 rounded-full bg-gradient-to-r from-yellow-700 via-yellow-600 to-yellow-700 text-white font-semibold tracking-wide shadow-lg shadow-yellow-900/30 hover:scale-[1.02] hover:shadow-yellow-700/30 transition duration-300",
+
+  helperText: "text-zinc-500",
+},
+
+wishes: {
+  title: "Ucapan & Doa",
+
+  divider: "/images/luxury/18.png",
+
+  card:
+    "border border-yellow-500/20 bg-zinc-900/50 rounded-2xl p-5",
+
+  name: "text-yellow-300",
+
+  message: "text-zinc-300",
+},
+
+location: {
+  title: "Lokasi Acara",
+
+  frame: "/images/luxury/round_frame.png",
+
+  divider: "/images/luxury/18.png",
+
+  icon: "📍",
+
+  iconColor: "text-yellow-400",
+
+  card:
+    "border border-yellow-500/20 rounded-3xl bg-zinc-900/50 p-8",
+
+  place: "text-zinc-300",
+
+  button:
+    "inline-block mt-8 px-8 py-4 rounded-full bg-yellow-600 hover:bg-yellow-500 text-white transition",
+},
+
+gift: {
+  title: "Amplop Digital",
+
+  frame: "/images/luxury/round_frame.png",
+
+  divider: "/images/luxury/18.png",
+
+  icon: "🎁",
+
+  iconColor: "text-yellow-400",
+
+  card:
+    "bg-zinc-900/50 border border-yellow-500/20 rounded-3xl p-8",
+
+  qrisCard:
+    "bg-zinc-900/50 border border-yellow-500/20 rounded-3xl p-6 mt-10",
+
+  qrisFrame:
+    "inline-block p-3 rounded-3xl border border-yellow-500/20 bg-zinc-900/50",
+
+  bankLabel: "text-zinc-400",
+
+  bankName: "text-yellow-300",
+
+  accountNumber: "text-white",
+
+  accountName: "text-zinc-400",
+
+  button:
+    "mt-6 px-8 py-3 rounded-full bg-yellow-600 hover:bg-yellow-500 text-white transition",
+},
+
+    backgroundCorner: {
+      topLeft:
+        "/images/luxury/corner_left.png",
+      topRight:
+        "/images/luxury/corner_right.png",
+      bottomLeft:
+        "/images/luxury/corner_left_bottom.png",
+      bottomRight:
+        "/images/luxury/corner_right_bottom.png",
+    },
+  },
+  "elegant-gold": {
+  background: "bg-[#faf8f3]",
+
+  font: {
+    title:
+      "font-[family-name:var(--font-great-vibes)] font-bold",
+
+    heading:
+      "font-[family-name:var(--font-cinzel-decorative)]",
+
+    script:
+      "font-[family-name:var(--font-pinyon-script)]",
+
+    body:
+      "font-[family-name:var(--font-title)]",
+  },
+
+  text: {
+    primary: "text-[#9A7B45]",
+    secondary: "text-zinc-500",
+    accent: "text-[#9A7B45]",
+    body: "text-[#5E503A]",
+    frameTitle: "text-yellow-300",
+  frameContent: "text-yellow-400",
+  },
+
+  hero: {
+  topOrnament: "/images/elegant/divider1.png",
+
+  divider: "/images/elegant/divider1.png",
+
+  dividerBottom: "/images/elegant/divider2.png",
+},
+
+  opening: {
+  ornament: "/images/elegant/divider2.png",
+},
+
+  couple: {
+
+leftOrnament:
+"/images/elegant/corner-top-left.png",
+
+rightOrnament:
+      "/images/elegant/corner-top-right.png",
+
+titleOrnament:
+"/images/elegant/divider1.png",
+
+centerImage:
+"/images/elegant/divider2.png",
+
+divider:
+"/images/elegant/divider2.png",
+
+photoFrame:
+"/images/elegant/frame.png",
+
+},
+
+  loveStory: {
+
+frame:
+"/images/elegant/frame.png",
+
+divider:
+"/images/elegant/divider2.png",
+
+icon:"❤",
+
+iconColor:"text-[#9A7B45]",
+
+card:
+"bg-white border border-[#D4AF37]/30 shadow-md",
+
+imageWrapper:
+"bg-[#faf8f3]",
+
+imageBorder:
+"border-[#D4AF37]/30",
+
+},
+
+  events:{
+
+titleDivider:
+"/images/elegant/divider2.png",
+
+frame:
+"/images/elegant/frame.png",
+
+bottomDivider:
+"/images/elegant/divider1.png",
+
+},
+
+  gallery: {
+  title: "Gallery",
+
+  divider:
+"/images/elegant/divider2.png",
+
+  card:
+    "bg-white border border-[#D4AF37]/30 shadow-md",
+},
+
+countdown: {
+  title: "Menuju Hari Bahagia",
+
+  frame:
+"/images/elegant/frame.png",
+
+divider:
+"/images/elegant/divider2.png",
+
+  heartColor: "text-[#9A7B45]",
+
+  card:
+    "border border-[#D4AF37]/30 bg-white/80 backdrop-blur-sm shadow-md",
+
+  number: "text-[#9A7B45]",
+
+  label: "text-zinc-500",
+},
+
+rsvp: {
+  title: "Konfirmasi Kehadiran",
+
+  frame:
+"/images/elegant/frame.png",
+
+divider:
+"/images/elegant/divider2.png",
+
+  icon: "✦",
+
+  iconColor: "text-[#9A7B45]",
+
+  input:
+    "w-full bg-zinc-900 border border-yellow-500/30 rounded-xl px-4 py-3 text-white",
+
+  textarea:
+    "w-full min-h-[140px] bg-[#111] border border-yellow-500/20 rounded-xl px-5 py-4 text-zinc-100 placeholder:text-zinc-500 leading-7 resize-none focus:outline-none focus:ring-2 focus:ring-yellow-500/40 transition",
+
+  button:
+    "inline-block mt-8 px-8 py-4 rounded-full bg-[#9A7B45] hover:bg-[#876c3d] text-white transition",
+
+  helperText: "text-zinc-500",
+},
+
+wishes: {
+  title: "Ucapan & Doa",
+
+  divider:
+"/images/elegant/divider2.png",
+
+  card:
+    "border border-[#D4AF37]/30 bg-white rounded-2xl p-5 shadow-md",
+
+  name: "text-[#9A7B45]",
+
+  message: "text-[#5E503A]",
+},
+
+location: {
+  title: "Lokasi Acara",
+
+  frame:
+"/images/elegant/frame.png",
+
+divider:
+"/images/elegant/divider2.png",
+
+  icon: "📍",
+
+  iconColor: "text-[#9A7B45]",
+
+  card:
+    "border border-[#D4AF37]/30 rounded-3xl bg-white p-8 shadow-md",
+
+  place: "text-[#5E503A]",
+
+  button:
+    "inline-block mt-8 px-8 py-4 rounded-full bg-[#9A7B45] hover:bg-[#876c3d] text-white transition",
+},
+
+gift: {
+  title: "Amplop Digital",
+
+  frame:
+"/images/elegant/frame.png",
+
+divider:
+"/images/elegant/divider2.png",
+
+  icon: "🎁",
+
+  iconColor: "text-[#9A7B45]",
+
+  card:
+    "bg-white border border-[#D4AF37]/30 rounded-3xl p-8 shadow-md",
+
+  qrisCard:
+    "bg-white border border-[#D4AF37]/30 rounded-3xl p-6 mt-10 shadow-md",
+
+  qrisFrame:
+    "inline-block p-3 rounded-3xl border border-[#D4AF37]/30 bg-white",
+
+  bankLabel: "text-zinc-500",
+
+  bankName: "text-[#9A7B45]",
+
+  accountNumber: "text-[#5E503A]",
+
+  accountName: "text-zinc-500",
+
+  button:
+    "mt-6 px-8 py-3 rounded-full bg-[#9A7B45] hover:bg-[#876c3d] text-white transition",
+},
+
+  backgroundCorner:{
+
+topLeft:
+"/images/elegant/corner-top-left.png",
+
+topRight:
+      "/images/elegant/corner-top-right.png",
+
+bottomLeft:
+"/images/elegant/corner-bottom-left.png",
+
+bottomRight:
+"/images/elegant/corner-bottom-right.png",
+
+},
+},
+
+};

@@ -1,20 +1,28 @@
-export default function ElegantGoldCouple({
-  data,
-}: {
+"use client";
+
+import { useTheme } from "@/theme/ThemeProvider";
+
+type CoupleProps = {
   data: any;
-}) {
+};
+
+export default function Couple({
+  data,
+}: CoupleProps) {
+
+  const theme = useTheme(); {
   return (
     <section
-  className="
-  relative
-  py-12
-  px-5
-  overflow-hidden
-  "
+className="
+relative
+py-12
+px-5
+overflow-hidden
+"
 >
 
   <img
-  src="/images/luxury/5.png"
+  src={theme.couple.leftOrnament}
   alt=""
   className="
   absolute
@@ -28,7 +36,7 @@ export default function ElegantGoldCouple({
 />
 
 <img
-  src="/images/luxury/7.png"
+  src={theme.couple.rightOrnament}
   alt=""
   className="
   absolute
@@ -44,7 +52,7 @@ export default function ElegantGoldCouple({
       <div className="text-center mb-20">
 
   <img
-    src="/images/luxury/12.png"
+    src={theme.couple.titleOrnament}
     alt=""
     className="
     w-56
@@ -55,12 +63,12 @@ export default function ElegantGoldCouple({
   />
 
   <h2
-    className="
-    text-4xl
-    md:text-5xl
-    font-[family-name:var(--font-great-vibes)] font-bold
-    text-[#9A7B45]
-    "
+    className={`
+text-4xl
+md:text-5xl
+${theme.font.title}
+${theme.text.primary}
+`}
   >
     Mempelai
   </h2>
@@ -103,7 +111,7 @@ h-[70%]
   />
 
   <img
-    src="/images/luxury/round_frame.png"
+    src={theme.couple.photoFrame}
     alt=""
     className="
     absolute
@@ -117,48 +125,47 @@ h-[70%]
 </div>
 
           <h3
-            className="
+            className={`
             text-4xl
-            font-[family-name:var(--font-great-vibes)] font-bold
-            text-[#9A7B45]
+            ${theme.font.title}
+  ${theme.text.primary}
             mt-8
-            "
+            `}
           >
             {data.groom}
           </h3>
 
           <p
-            className="
-            text-[#9A7B45]
+            className={`
+            ${theme.text.accent}
             font-[family-name:var(--font-body)]
-            font-bold
             uppercase
             tracking-widest
             text-sm
             mt-6
-            "
+            `}
           >
             {data.groomTitle}
           </p>
 
-          <p className="text-black mt-4
+          <p className={`${theme.text.body} mt-4
           text-2xl
 md:text-2xl
-          font-[family-name:var(--font-pinyon-script)] font-bold">
+          font-[family-name:var(--font-pinyon-script)]`}>
             Bapak {data.groomFather}
           </p>
 
-          <p className="text-black my-2
+          <p className={`${theme.text.accent} my-2
           text-2xl
 md:text-2xl
-          font-[family-name:var(--font-pinyon-script)] font-bold">
+          font-[family-name:var(--font-pinyon-script)]`}>
             &
           </p>
 
-          <p className="text-black
+          <p className={`${theme.text.body}
           text-2xl
 md:text-2xl
-          font-[family-name:var(--font-pinyon-script)] font-bold">
+          font-[family-name:var(--font-pinyon-script)]`}>
             Ibu {data.groomMother}
           </p>
 
@@ -185,7 +192,7 @@ md:text-2xl
   "
 >
   <img
-    src="/images/luxury/8.png"
+    src={theme.couple.centerImage}
     alt=""
     className="
 w-72
@@ -219,7 +226,7 @@ h-[70%]
   />
 
   <img
-    src="/images/luxury/round_frame.png"
+    src={theme.couple.photoFrame}
     alt=""
     className="
     absolute
@@ -233,53 +240,53 @@ h-[70%]
 </div>
 
           <h3
-            className="
+            className={`
             text-4xl
-            font-[family-name:var(--font-great-vibes)] font-bold
-            text-[#9A7B45]
+            ${theme.font.title}
+  ${theme.text.primary}
             mt-8
-            "
+            `}
           >
             {data.bride}
           </h3>
 
           <p
-            className="
-            text-[#9A7B45]
-            font-[family-name:var(--font-body)] font-bold
+            className={`
+            ${theme.text.accent}
+            font-[family-name:var(--font-body)]
             uppercase
             tracking-widest
             text-sm
             mt-6
-            "
+            `}
           >
             {data.brideTitle}
           </p>
 
-          <p className="text-black mt-4
+          <p className={`${theme.text.body} mt-4
           text-2xl
 md:text-2xl
-          font-[family-name:var(--font-pinyon-script)] font-bold">
+          font-[family-name:var(--font-pinyon-script)]`}>
             Bapak {data.brideFather}
           </p>
 
-          <p className="text-black my-2
+          <p className={`${theme.text.accent} my-2
           text-2xl
 md:text-2xl
-          font-[family-name:var(--font-pinyon-script)] font-bold">
+          font-[family-name:var(--font-pinyon-script)]`}>
             &
           </p>
 
-          <p className="text-black
+          <p className={`${theme.text.body}
           text-2xl
 md:text-2xl
-          font-[family-name:var(--font-pinyon-script)] font-bold">
+          font-[family-name:var(--font-pinyon-script)]`}>
             Ibu {data.brideMother}
           </p>
 
           <div className="mt-20 text-center">
   <img
-    src="/images/luxury/3.png"
+    src={theme.couple.divider}
     alt=""
     className="
     w-72
@@ -295,4 +302,5 @@ md:text-2xl
 
     </section>
   );
+}
 }

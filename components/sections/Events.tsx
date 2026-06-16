@@ -1,23 +1,31 @@
-export default function ElegantGoldEvents({
-  data,
-}: {
+"use client";
+
+import { useTheme } from "@/theme/ThemeProvider";
+
+type EventsProps = {
   data: any;
-}) {
+};
+
+export default function Events({
+  data,
+}: EventsProps) {
+
+  const theme = useTheme();
   return (
     <section
-      className="
-      relative
-      py-18
-      px-5
-      overflow-hidden
-      "
-    >
+className="
+relative
+py-18
+px-5
+overflow-hidden
+"
+>
 
       {/* Judul */}
-      <div className="text-center mb-20">
+      <div className="text-center mb-10">
 
         <img
-  src="/images/luxury/18.png"
+  src={theme.events.titleDivider}
   alt=""
   className="
   w-72
@@ -28,13 +36,12 @@ export default function ElegantGoldEvents({
 />
 
         <h2
-          className="
-          text-4xl
-          md:text-5xl
-          font-[family-name:var(--font-great-vibes)]
-          font-bold
-          text-[#9A7B45]
-          "
+          className={`
+text-4xl
+md:text-5xl
+${theme.font.title}
+${theme.text.primary}
+`}
         >
           Detail Acara
         </h2>
@@ -55,7 +62,7 @@ export default function ElegantGoldEvents({
         <div className="relative">
 
           <img
-            src="/images/luxury/17.png"
+            src={theme.events.frame}
             alt=""
             className="
             w-full
@@ -79,20 +86,23 @@ export default function ElegantGoldEvents({
           >
 
             <h3
-              className="text-yellow-300 tracking-[3px] 
-      font-[family-name:var(--font-pinyon-script)]
-      text-[26px]"
+              className={`
+tracking-[3px]
+text-[26px]
+${theme.font.title}
+${theme.text.primary}
+`}
             >
               Akad Nikah
             </h3>
 
-            <div className="
+            <div className={`
 mt-1
-text-1xl
-font-[family-name:var(--font-great-vibes)]
-text-yellow-400
 leading-tight
-">
+text-xl
+${theme.font.script}
+${theme.text.accent}
+`}>
 
               <p>{data.akadDate}</p>
 
@@ -110,7 +120,7 @@ leading-tight
         <div className="relative">
 
           <img
-            src="/images/luxury/17.png"
+            src={theme.events.frame}
             alt=""
             className="
             w-full
@@ -134,20 +144,23 @@ leading-tight
           >
 
             <h3
-              className="text-yellow-300 tracking-[3px] 
-      font-[family-name:var(--font-pinyon-script)]
-      text-[26px]"
+              className={`
+tracking-[3px]
+text-[26px]
+${theme.font.title}
+${theme.text.primary}
+`}
             >
               Resepsi
             </h3>
 
-            <div className="
+            <div className={`
 mt-1
-text-1xl
-font-[family-name:var(--font-great-vibes)]
-text-yellow-400
 leading-tight
-">
+text-xl
+${theme.font.script}
+${theme.text.accent}
+`}>
 
               <p>{data.resepsiDate}</p>
 
@@ -165,7 +178,7 @@ leading-tight
 
       <div className="mt-20 text-center">
   <img
-    src="/images/luxury/3.png"
+    src={theme.events.bottomDivider}
     alt=""
     className="
     w-72

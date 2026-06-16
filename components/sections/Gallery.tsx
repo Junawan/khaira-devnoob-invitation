@@ -1,11 +1,24 @@
-export default function LuxuryBlackGallery({
-  gallery,
-}: {
-  gallery: string[];
-}) {
+"use client";
 
-  if (!gallery?.length)
-    return null;
+import { useTheme } from "@/theme/ThemeProvider";
+
+interface GalleryProps {
+  gallery: string[];
+}
+
+export default function Gallery({
+  gallery,
+}: GalleryProps) {
+
+const theme = useTheme();
+
+  const {
+    gallery: galleryTheme,
+    font,
+    text,
+  } = theme;
+
+  if (!gallery?.length) return null;
 
   return (
 
@@ -20,7 +33,7 @@ export default function LuxuryBlackGallery({
 
       {/* Divider Atas */}
       <img
-        src="/images/luxury/18.png"
+        src={galleryTheme.divider}
         alt=""
         className="
         w-56
@@ -31,17 +44,16 @@ export default function LuxuryBlackGallery({
       />
 
       <h2
-        className="
+        className={`
         text-4xl
         md:text-5xl
-        font-[family-name:var(--font-great-vibes)]
-        font-bold
         text-center
-        text-yellow-400
         mb-16
-        "
+        ${font.title}
+        ${text.primary}
+        `}
       >
-        Gallery
+        {galleryTheme.title}
       </h2>
 
       <div
@@ -58,14 +70,11 @@ export default function LuxuryBlackGallery({
 
           <div
             key={image}
-            className="
+            className={`
             overflow-hidden
             rounded-3xl
-            border
-            border-yellow-500/40
-            bg-zinc-900
-            shadow-[0_0_20px_rgba(234,179,8,0.08)]
-            "
+            ${galleryTheme.card}
+            `}
           >
 
             <img
@@ -89,7 +98,7 @@ export default function LuxuryBlackGallery({
 
       {/* Divider Bawah */}
       <img
-        src="/images/luxury/18.png"
+        src={galleryTheme.divider}
         alt=""
         className="
         w-56

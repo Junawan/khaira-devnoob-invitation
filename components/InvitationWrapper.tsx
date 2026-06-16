@@ -8,6 +8,8 @@ from "./AudioPlayer";
 import MusicButton
 from "./MusicButton";
 
+import ThemeBackground from "@/components/common/ThemeBackground";
+
 export default function InvitationWrapper({
   groom,
   bride,
@@ -57,61 +59,7 @@ ${isLuxury ? "bg-black" : "bg-[#faf8f3]"}
 
         <div className="fixed inset-0 pointer-events-none z-0">
 
-        <img
-  src="/images/luxury/corner_left.png"
-  alt=""
-  className="
-  absolute
-  top-0
-  left-0
-  w-24
-  md:w-36
-  opacity-60
-  "
-/>
-
-<img
-  src="/images/luxury/corner_right.png"
-  alt=""
-  className="
-  absolute
-  top-0
-  right-0
-  w-24
-  md:w-36
-  opacity-60
-  "
-/>
-
-<img
-  src="/images/luxury/corner_left_bottom.png"
-  alt=""
-  className="
-  fixed
-  bottom-0
-  left-0
-  w-24
-  md:w-36
-  opacity-60
-  pointer-events-none
-  z-0
-  "
-/>
-
-<img
-  src="/images/luxury/corner_right_bottom.png"
-  alt=""
-  className="
-  fixed
-  bottom-0
-  right-0
-  w-24
-  md:w-36
-  opacity-60
-  pointer-events-none
-  z-0
-  "
-/>
+        <ThemeBackground/>
 </div>
 
         <div
@@ -393,9 +341,9 @@ ${
         }
       />
 
-      <div className="fade-scale">
+      
         {children}
-      </div>
+      
     </>
   );
 }

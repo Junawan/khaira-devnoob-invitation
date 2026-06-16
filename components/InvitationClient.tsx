@@ -18,79 +18,47 @@ from "./themes/LuxuryBlack";
 import ElegantGold
 from "./themes/ElegantGold";
 
-import ElegantGoldEvents
-from "./themes/ElegantGold/Events";
+import Events from "@/components/sections/Events";
 
-import LuxuryBlackHero
-from "./themes/LuxuryBlack/Hero";
+import Hero
+from "@/components/sections/Hero";
 
-import LuxuryBlackOpening
-from "./themes/LuxuryBlack/Opening";
+import Opening
+from "@/components/sections/Opening";
 
-import LuxuryBlackEvents
-from "./themes/LuxuryBlack/Events";
-
-import LuxuryBlackGift
-from "./themes/LuxuryBlack/Gift";
-
-import LuxuryBlackGallery
-from "./themes/LuxuryBlack/Gallery";
+import Couple
+from "@/components/sections/Couple";
 
 import InvitationWrapper
 from "./InvitationWrapper";
 
 import { useEffect } from "react";
 
-import LuxuryBlackCouple
-from "./themes/LuxuryBlack/Couple";
+import Countdown
+from "@/components/sections/Countdown";
 
-import LuxuryBlackCountdown
-from "./themes/LuxuryBlack/Countdown";
+import Rsvp
+from "@/components/sections/Rsvp";
 
-import LuxuryBlackRsvp
-from "./themes/LuxuryBlack/Rsvp";
+import Location
+from "@/components/sections/Location";
 
-import LuxuryBlackWishes
-from "./themes/LuxuryBlack/Wishes";
+import LoveStory
+from "@/components/sections/LoveStory";
 
-import LuxuryBlackLocation
-from "./themes/LuxuryBlack/Location";
+import Gallery
+from "@/components/sections/Gallery";
 
-import LuxuryBlackLoveStory
-from "./themes/LuxuryBlack/LoveStory";
+import Wishes
+from "@/components/sections/Wishes";
 
-import ElegantGoldCouple
-from "./themes/ElegantGold/Couple";
+import Gift
+from "@/components/sections/Gift";
 
-import ElegantGoldHero
-from "./themes/ElegantGold/Hero";
+import { ThemeProvider } from "@/theme/ThemeProvider";
 
-import ElegantGoldOpening
-from "./themes/ElegantGold/Opening";
-
-import ElegantGoldLoveStory
-from "./themes/ElegantGold/LoveStory";
-
-import ElegantGoldGallery
-from "./themes/ElegantGold/Gallery";
-
-import ElegantGoldCountdown
-from "./themes/ElegantGold/Countdown";
-
-import ElegantGoldRsvp
-from "./themes/ElegantGold/Rsvp";
-
-import ElegantGoldWishes
-from "./themes/ElegantGold/Wishes";
-
-import ElegantGoldLocation
-from "./themes/ElegantGold/Location";
-
-import ElegantGoldGift
-from "./themes/ElegantGold/Gift";
-
-import AudioPlayer
-from "./AudioPlayer";
+import ThemeLayout
+from "@/components/common/ThemeLayout";
 
 export default function InvitationClient({
   slug,
@@ -184,115 +152,103 @@ export default function InvitationClient({
   theme={data.theme}
   musicUrl={data.musicUrl}
 >
+  <ThemeProvider theme={data.theme}>
 
-    <ThemeWrapper>
+    <ThemeLayout>
 
       <main>
 
       {isLuxury ? (
 
   <>
-    <LuxuryBlackHero
-  groom={data.groom}
-  bride={data.bride}
-  coverImage={data.coverImage}
+    <Hero
+groom={data.groom}
+bride={data.bride}
+coverImage={data.coverImage}
 />
 
-<LuxuryBlackOpening />
+<Opening />
 
-<LuxuryBlackCouple
-  data={data}
+<Couple data={data} />
+
+<LoveStory stories={data.loveStory}
 />
 
-<LuxuryBlackLoveStory
-  stories={data.loveStory}
-/>
+    <Events data={data}/>
 
-    <LuxuryBlackEvents
-      data={data}
-    />
-
-    <LuxuryBlackGallery
+    <Gallery
   gallery={data.gallery}
 />
 
-<LuxuryBlackCountdown
+<Countdown
   targetDate={data.date}
 />
 
-<LuxuryBlackRsvp
-  slug={slug}
+<Rsvp slug={slug} />
+
+<Wishes
+    slug={slug}
 />
 
-<LuxuryBlackWishes
-  slug={slug}
-/>
-
-<LuxuryBlackLocation
+<Location
   mapsUrl={data.mapsUrl}
   akadPlace={data.akadPlace}
   resepsiPlace={data.resepsiPlace}
 />
 
-    <LuxuryBlackGift
-      data={data}
-    />
+    <Gift
+    data={data}
+/>
   </>
 
 ) : (
 
   <>
-  <ElegantGoldHero
-    groom={data.groom}
-    bride={data.bride}
-    coverImage={data.coverImage}
-  />
-
-  <ElegantGoldOpening />
-
-  <ElegantGoldCouple
-    data={data}
-  />
-
-  <ElegantGoldLoveStory
-  stories={data.loveStory}
+  <Hero
+groom={data.groom}
+bride={data.bride}
+coverImage={data.coverImage}
 />
 
-  <ElegantGoldEvents
-    data={data}
-  />
+<Opening />
 
-  <ElegantGoldGallery
+<Couple data={data} />
+
+<LoveStory stories={data.loveStory}
+/>
+
+  <Events data={data}/>
+
+ <Gallery
   gallery={data.gallery}
 />
 
-<ElegantGoldCountdown
+<Countdown
   targetDate={data.date}
 />
 
-<ElegantGoldRsvp
-  slug={slug}
+<Rsvp slug={slug} />
+
+<Wishes
+    slug={slug}
 />
 
-<ElegantGoldWishes
-  slug={slug}
-/>
-
-<ElegantGoldLocation
+<Location
   mapsUrl={data.mapsUrl}
   akadPlace={data.akadPlace}
   resepsiPlace={data.resepsiPlace}
 />
 
-<ElegantGoldGift
-      data={data}
-    />
+<Gift
+    data={data}
+/>
 </>
 
 )}
     </main>
+    </ThemeLayout>
 
-</ThemeWrapper>
+</ThemeProvider>
 
  </InvitationWrapper>
   );
