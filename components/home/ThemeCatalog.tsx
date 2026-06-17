@@ -2,7 +2,7 @@ import ThemeCard from "./ThemeCard";
 
 import {
   invitationThemes,
-} from "@/data/invitationThemes";
+} from "@/app/data/InvitationThemes";
 
 export default function ThemeCatalog() {
 
