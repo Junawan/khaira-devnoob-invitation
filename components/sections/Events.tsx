@@ -40,7 +40,6 @@ overflow-hidden
           className={`
 text-4xl
 md:text-5xl
-mb-4
 ${theme.font.title}
 ${theme.text.primary}
 `}

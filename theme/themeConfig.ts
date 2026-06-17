@@ -72,8 +72,7 @@ photo: {
 
     opening:{
 
-ornament:"/images/luxury/18.png",
-ornamentBottom:"/images/luxury/18.png",
+ornament:"/images/luxury/18.png"
 
 },
 
@@ -363,7 +362,6 @@ photo: {
 
   opening: {
   ornament: "/images/elegant/divider2.png",
-  ornamentBottom: "/images/elegant/divider3.png",
 },
 
   couple: {

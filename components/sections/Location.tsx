@@ -82,7 +82,7 @@ ${theme.location.place}
         </a>
 
         <img
-          src="/images/luxury/18.png"
+          src={theme.location.divider}
           alt=""
           className="w-56 mx-auto mt-10"
         />
