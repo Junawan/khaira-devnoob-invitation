@@ -98,7 +98,7 @@ className="
 w-72
 md:w-96
 mx-auto
-mt-28
+mt-36
 "
 />
 

@@ -9,10 +9,12 @@ import {
   setDoc,
   serverTimestamp,
 } from "firebase/firestore";
+import { useAuth } from "@/providers/AuthProvider";
 
 export default function CreateInvitationForm() {
 
     const router = useRouter();
+    const { user, profile } = useAuth();
 
   const [groom, setGroom] =
     useState("");
@@ -23,6 +25,9 @@ export default function CreateInvitationForm() {
   const [date, setDate] =
     useState("");
 
+    const [theme, setTheme] =
+  useState("luxury-black");
+
     const [loveStory, setLoveStory] =
   useState([
     {
@@ -32,38 +37,84 @@ export default function CreateInvitationForm() {
     },
   ]);
 
-    const createInvitation =
-  async () => {
+    const createInvitation = async () => {
 
-    const slug =
-      `${groom}-${bride}`
-        .toLowerCase()
-        .replaceAll(" ", "-");
+  if (!user || !profile) {
+    alert("Silakan login terlebih dahulu.");
+    return;
+  }
 
-    await setDoc(
-      doc(
-        db,
-        "invitations",
-        slug
-      ),
-      {
-        groom,
-        bride,
-        date,
-        loveStory,
+  const slug =
+    `${groom}-${bride}-${Date.now()}`
+      .toLowerCase()
+      .replaceAll(" ", "-");
 
-        createdAt:
-          serverTimestamp(),
-      }
-    );
+  await setDoc(
+    doc(db, "invitations", slug),
+    {
+      uid: user.uid,
+
+      ownerName: profile.name,
+
+      ownerEmail: profile.email,
+
+      ownerPhone: profile.phone,
+
+      groom,
+
+      bride,
+
+      date,
+
+      theme,
+
+      loveStory,
+
+      createdAt: serverTimestamp(),
+
+      updatedAt: serverTimestamp(),
+    }
+  );
+
+  if (profile.role === "admin") {
+
+    router.push(`/admin/${slug}/edit`);
+
+  } else {
 
     router.push(
-  `/admin/${slug}/edit`
-);
+      `/dashboard/invitation/${slug}/edit`
+    );
+
+  }
+
 };
 
   return (
     <div className="max-w-2xl mx-auto bg-white p-8 rounded-3xl shadow">
+
+      <select
+  value={theme}
+  onChange={(e) =>
+    setTheme(e.target.value)
+  }
+  className="
+  w-full
+  border
+  p-4
+  rounded-xl
+  "
+>
+
+  <option value="luxury-black">
+    Luxury Black
+  </option>
+
+  <option value="elegant-gold">
+    Elegant Gold
+  </option>
+
+</select>
 
       <h1 className="text-4xl font-bold mb-8">
         Buat Undangan
@@ -100,129 +151,11 @@ export default function CreateInvitationForm() {
           className="w-full border p-4 rounded-xl"
         />
 
-        <div className="mt-8">
-
-  <h3 className="text-xl font-semibold mb-4">
-    Love Story
-  </h3>
-
-  {loveStory.map(
-    (story, index) => (
-
-      <div
-        key={index}
-        className="
-        border
-        rounded-xl
-        p-4
-        mb-4
-        "
-      >
-
-        <input
-          placeholder="Tahun"
-          value={story.year}
-          onChange={(e) => {
-
-            const updated =
-              [...loveStory];
-
-            updated[index].year =
-              e.target.value;
-
-            setLoveStory(updated);
-
-          }}
-          className="
-          w-full
-          border
-          p-3
-          rounded-lg
-          mb-3
-          "
-        />
-
-        <input
-          placeholder="Judul"
-          value={story.title}
-          onChange={(e) => {
-
-            const updated =
-              [...loveStory];
-
-            updated[index].title =
-              e.target.value;
-
-            setLoveStory(updated);
-
-          }}
-          className="
-          w-full
-          border
-          p-3
-          rounded-lg
-          mb-3
-          "
-        />
-
-        <textarea
-          placeholder="Cerita"
-          value={story.description}
-          onChange={(e) => {
-
-            const updated =
-              [...loveStory];
-
-            updated[index].description =
-              e.target.value;
-
-            setLoveStory(updated);
-
-          }}
-          className="
-          w-full
-          border
-          p-3
-          rounded-lg
-          h-28
-          "
-        />
-
-      </div>
-
-    )
-  )}
-
-  <button
-    type="button"
-    onClick={() =>
-      setLoveStory([
-        ...loveStory,
-        {
-          year: "",
-          title: "",
-          description: "",
-        },
-      ])
-    }
-    className="
-    bg-blue-500
-    text-white
-    px-4
-    py-2
-    rounded-lg
-    "
-  >
-    + Tambah Story
-  </button>
-
-</div>
-
         <button
   onClick={createInvitation}
   className="bg-[#9A7B45] text-white px-6 py-4 rounded-xl"
 >
-  Buat Undangan
+  Buat Undangan & Lengkapi Data
 </button>
 
       </div>

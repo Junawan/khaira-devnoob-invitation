@@ -1,4 +1,15 @@
+"use client";
+
+import Link from "next/link";
+import { useAuth } from "@/providers/AuthProvider";
+
 export default function Navbar() {
+
+  const {
+    user,
+    profile,
+    logout,
+  } = useAuth();
 
   return (
 
@@ -25,15 +36,16 @@ export default function Navbar() {
         "
       >
 
-        <h1
+        <Link
+          href="/"
           className="
           text-2xl
           font-bold
           font-serif
           "
         >
-          Khaira Invitation
-        </h1>
+          Khaira Devnoob Invitation
+        </Link>
 
         <nav
           className="
@@ -44,15 +56,15 @@ export default function Navbar() {
           "
         >
 
-          <a href="#">
+          <a href="#template">
             Template
           </a>
 
-          <a href="#">
+          <a href="#pricing">
             Harga
           </a>
 
-          <a href="#">
+          <a href="#faq">
             FAQ
           </a>
 
@@ -61,34 +73,123 @@ export default function Navbar() {
         <div
           className="
           flex
+          items-center
           gap-3
           "
         >
 
-          <a
-            href="/login"
-            className="
-            px-4
-            py-2
-            rounded-lg
-            border
-            "
-          >
-            Login
-          </a>
+          {/* Belum Login */}
 
-          <a
-            href="/register"
-            className="
-            px-4
-            py-2
-            rounded-lg
-            bg-black
-            text-white
-            "
-          >
-            Daftar
-          </a>
+          {!user && (
+
+            <>
+
+              <Link
+                href="/login"
+                className="
+                px-4
+                py-2
+                rounded-lg
+                border
+                "
+              >
+                Login
+              </Link>
+
+              <Link
+                href="/login"
+                className="
+                px-4
+                py-2
+                rounded-lg
+                bg-black
+                text-white
+                "
+              >
+                Daftar
+              </Link>
+
+            </>
+
+          )}
+
+          {/* Customer */}
+
+          {user &&
+            profile?.role === "customer" && (
+
+            <>
+
+              <Link
+                href={
+                  profile.premium
+                    ? "/dashboard"
+                    : "/checkout"
+                }
+                className="
+                px-4
+                py-2
+                rounded-lg
+                bg-black
+                text-white
+                "
+              >
+                {profile.premium
+                  ? "Undangan Saya"
+                  : "Checkout"}
+              </Link>
+
+              <button
+                onClick={logout}
+                className="
+                px-4
+                py-2
+                rounded-lg
+                border
+                "
+              >
+                Logout
+              </button>
+
+            </>
+
+          )}
+
+          {/* Admin */}
+
+          {user &&
+            profile?.role === "admin" && (
+
+            <>
+
+              <Link
+                href="/admin"
+                className="
+                px-4
+                py-2
+                rounded-lg
+                bg-black
+                text-white
+                "
+              >
+                Admin Dashboard
+              </Link>
+
+              <button
+                onClick={logout}
+                className="
+                px-4
+                py-2
+                rounded-lg
+                border
+                "
+              >
+                Logout
+              </button>
+
+            </>
+
+          )}
 
         </div>
 

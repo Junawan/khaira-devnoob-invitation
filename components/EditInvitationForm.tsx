@@ -9,6 +9,7 @@ import {
   doc,
   getDoc,
   updateDoc,
+  serverTimestamp,
 } from "firebase/firestore";
 
 import {
@@ -24,14 +25,27 @@ from "@/components/GalleryUpload";
 import MusicUpload
 from "@/components/MusicUpload";
 
+import { useAuth } from "@/providers/AuthProvider";
+import { useRouter } from "next/navigation";
+import {
+  invitationThemes,
+} from "@/data/invitationThemes";
+
 export default function EditInvitationForm({
   slug,
 }: {
   slug: string;
 }) {
 
+  const { user, profile } = useAuth();
+
+const router = useRouter();
+
   const [loading, setLoading] =
     useState(true);
+
+    const [ownerUid, setOwnerUid] =
+  useState("");
 
   const [groom, setGroom] =
     useState("");
@@ -151,6 +165,24 @@ const [brideMother, setBrideMother] =
           const data =
             snap.data();
 
+            if (
+
+profile?.role !== "admin" &&
+
+data.uid !== user?.uid
+
+) {
+
+alert(
+  "Anda tidak memiliki akses."
+);
+
+router.replace("/dashboard");
+
+return;
+
+}
+
           setGroom(
             data.groom || ""
           );
@@ -267,7 +299,12 @@ setLoveStory(
 setMusicUrl(
   data.musicUrl || ""
 );
+
+setOwnerUid(
+  data.uid || ""
+);
         }
+        
 
         setLoading(false);
       };
@@ -329,6 +366,8 @@ brideFather,
 brideMother,
 loveStory,
 musicUrl,
+
+updatedAt: serverTimestamp(),
       }
     );
 
@@ -629,20 +668,26 @@ musicUrl,
 <select
   value={theme}
   onChange={(e) =>
-    setTheme(
-      e.target.value
-    )
+    setTheme(e.target.value)
   }
-  className="w-full border p-4 rounded-xl"
+  className="
+  w-full
+  border
+  p-4
+  rounded-xl
+  "
 >
 
-  <option value="elegant-gold">
-    Elegant Gold
-  </option>
+  {invitationThemes.map((item) => (
 
-  <option value="luxury-black">
-    Luxury Black Gold
-  </option>
+    <option
+      key={item.id}
+      value={item.id}
+    >
+      {item.name}
+    </option>
+
+  ))}
 
 </select>
 

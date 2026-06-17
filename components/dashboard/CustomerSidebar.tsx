@@ -1,0 +1,85 @@
+"use client";
+
+import Link from "next/link";
+import { Icon } from "@iconify/react";
+
+const menus = [
+  {
+    title: "Dashboard",
+    href: "/dashboard",
+    icon: "ph:house",
+  },
+  {
+    title: "Buat Undangan",
+    href: "/dashboard/create",
+    icon: "ph:plus-circle",
+  },
+];
+
+export default function CustomerSidebar() {
+
+  return (
+
+    <aside
+      className="
+      w-72
+      min-h-screen
+      bg-white
+      border-r
+      "
+    >
+
+      <div className="p-8">
+
+        <h2
+          className="
+          text-3xl
+          font-serif
+          "
+        >
+          Khaira Invitation
+        </h2>
+
+        <p className="text-zinc-500 mt-2">
+          Dashboard
+        </p>
+
+      </div>
+
+      <nav className="px-4">
+
+        {menus.map(menu => (
+
+          <Link
+            key={menu.href}
+            href={menu.href}
+            className="
+            flex
+            items-center
+            gap-3
+            px-4
+            py-3
+            rounded-xl
+            hover:bg-stone-100
+            mb-2
+            "
+          >
+
+            <Icon
+              icon={menu.icon}
+              width={22}
+            />
+
+            {menu.title}
+
+          </Link>
+
+        ))}
+
+      </nav>
+
+    </aside>
+
+  );
+
+}

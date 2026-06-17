@@ -1,36 +1,46 @@
+"use client";
+
 import Link from "next/link";
 
+import { InvitationTheme } from "@/types/invitationTheme";
+import { useRouter } from "next/navigation";
+import {
+  useAuth,
+} from "@/providers/AuthProvider";
+
 type ThemeCardProps = {
-
-  name: string;
-
-  description: string;
-
-  image: string;
-
-  price: string;
-
-  badge: string;
-
-  demo: string;
-
+  theme: InvitationTheme;
 };
 
 export default function ThemeCard({
-
-  name,
-
-  description,
-
-  image,
-
-  price,
-
-  badge,
-
-  demo,
-
+  theme,
 }: ThemeCardProps) {
+
+  const {
+  
+  user,
+  
+  loading,
+  
+  } = useAuth();
+
+  const router = useRouter();
+
+  const handleOrder = () => {
+
+  if (loading) return;
+
+  if (!user) {
+
+    router.push("/login");
+
+    return;
+
+  }
+
+  router.push("/checkout");
+
+};
 
   return (
 
@@ -59,8 +69,8 @@ export default function ThemeCard({
       >
 
         <img
-          src={image}
-          alt={name}
+          src={theme.image}
+          alt={theme.name}
           className="
           w-full
           h-full
@@ -88,7 +98,7 @@ export default function ThemeCard({
           text-amber-700
           "
         >
-          {badge}
+          {theme.badge}
         </span>
 
         <h3
@@ -98,7 +108,7 @@ export default function ThemeCard({
           font-semibold
           "
         >
-          {name}
+          {theme.name}
         </h3>
 
         <p
@@ -108,18 +118,26 @@ export default function ThemeCard({
           text-zinc-500
           "
         >
-          {description}
+          {theme.description}
         </p>
 
-        <p
-          className="
-          mt-5
-          text-2xl
-          font-bold
-          "
-        >
-          {price}
-        </p>
+        <div className="mt-5 flex items-center gap-2">
+
+  <span
+    className="
+    px-3
+    py-1
+    rounded-full
+    bg-emerald-100
+    text-emerald-700
+    text-sm
+    font-medium
+    "
+  >
+    ✔ Semua Fitur
+  </span>
+
+</div>
 
         <div
           className="
@@ -130,7 +148,7 @@ export default function ThemeCard({
         >
 
           <Link
-            href={demo}
+            href={theme.demo}
             className="
             flex-1
             text-center
@@ -145,17 +163,20 @@ export default function ThemeCard({
           </Link>
 
           <button
-            className="
-            flex-1
-            py-3
-            rounded-xl
-            bg-black
-            text-white
-            hover:bg-zinc-800
-            transition
-            "
-          >
-            Gunakan
+            onClick={handleOrder}
+  className="
+  mt-10
+  px-8
+  py-4
+  rounded-xl
+  bg-black
+  text-white
+  hover:bg-zinc-800
+  transition
+  "
+>
+
+Pesan Sekarang
           </button>
 
         </div>

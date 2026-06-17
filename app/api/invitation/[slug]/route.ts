@@ -1,11 +1,5 @@
 import { NextResponse } from "next/server";
-
-import { db } from "@/lib/firebase";
-
-import {
-  doc,
-  getDoc,
-} from "firebase/firestore";
+import { adminDb } from "@/lib/firebase-admin";
 
 export async function GET(
   request: Request,
@@ -22,27 +16,27 @@ export async function GET(
     await params;
 
   const snap =
-    await getDoc(
-      doc(
-        db,
-        "invitations",
-        slug
-      )
-    );
+    await adminDb
+      .collection("invitations")
+      .doc(slug)
+      .get();
 
-  if (!snap.exists()) {
+  if (!snap.exists) {
+
     return NextResponse.json(
       {
-        error:
-          "not found",
+        error: "Not Found",
       },
       {
         status: 404,
       }
     );
+
   }
 
-  return NextResponse.json(
-    snap.data()
-  );
+  return NextResponse.json({
+    id: snap.id,
+    ...snap.data(),
+  });
+
 }

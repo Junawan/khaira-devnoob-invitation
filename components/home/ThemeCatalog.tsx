@@ -1,8 +1,6 @@
 import ThemeCard from "./ThemeCard";
 
-import {
-  invitationThemes,
-} from "@/app/data/InvitationThemes";
+import { invitationThemes } from "@/data/invitationThemes";
 
 export default function ThemeCatalog() {
 
@@ -54,17 +52,19 @@ gap-8
 "
 >
 
-{invitationThemes.map((theme)=>(
+{
+  invitationThemes.map((theme) => (
 
-<ThemeCard
+    <ThemeCard
 
-key={theme.id}
+      key={theme.id}
 
-{...theme}
+      theme={theme}
 
-/>
+    />
 
-))}
+  ))
+}
 
 </div>
 
