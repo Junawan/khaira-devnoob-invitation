@@ -72,7 +72,8 @@ photo: {
 
     opening:{
 
-ornament:"/images/luxury/18.png"
+ornament:"/images/luxury/18.png",
+ornamentBottom:"/images/luxury/18.png",
 
 },
 
@@ -326,7 +327,7 @@ bottomDivider:
 "/images/elegant/divider2.png",
 
 guestFrame:
-"/images/elegant/frame.png",
+"/images/elegant/frame-event.png",
 
 button:
 "bg-[#9A7B45] hover:bg-[#b38d4c]",
@@ -362,6 +363,7 @@ photo: {
 
   opening: {
   ornament: "/images/elegant/divider2.png",
+  ornamentBottom: "/images/elegant/divider3.png",
 },
 
   couple: {
@@ -422,7 +424,7 @@ titleDivider:
 "/images/elegant/divider2.png",
 
 frame:
-"/images/elegant/frame.png",
+"/images/elegant/frame-card.png",
 
 bottomDivider:
 "/images/elegant/divider1.png",

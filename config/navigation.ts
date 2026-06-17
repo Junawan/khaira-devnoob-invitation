@@ -13,12 +13,6 @@ export const navigation = [
   },
 
   {
-    id: "story",
-    label: "Story",
-    icon: "ph:book-open",
-  },
-
-  {
     id: "events",
     label: "Acara",
     icon: "ph:calendar",

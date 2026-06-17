@@ -40,6 +40,7 @@ overflow-hidden
           className={`
 text-4xl
 md:text-5xl
+mb-4
 ${theme.font.title}
 ${theme.text.primary}
 `}
@@ -56,6 +57,7 @@ ${theme.text.primary}
         grid
         md:grid-cols-2
         gap-12
+        mt-4
         "
       >
 

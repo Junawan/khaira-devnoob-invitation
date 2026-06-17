@@ -4,7 +4,15 @@ import { Icon } from "@iconify/react";
 import { navigation } from "@/config/navigation";
 import { useTheme } from "@/theme/ThemeProvider";
 
-export default function BottomNavigation() {
+type BottomNavigationProps = {
+  isPlaying: boolean;
+  onToggleMusic: () => void;
+};
+
+export default function BottomNavigation({
+  isPlaying,
+  onToggleMusic,
+}: BottomNavigationProps) {
 
   const theme = useTheme();
 
@@ -52,38 +60,68 @@ export default function BottomNavigation() {
 
         {navigation.map((item) => (
 
-          <button
+  <button
 
-            key={item.id}
+    key={item.id}
 
-            onClick={() => scrollTo(item.id)}
+    onClick={() => scrollTo(item.id)}
 
-            className="
-            w-11
-            h-11
-            rounded-full
-            flex
-            items-center
-            justify-center
-            transition
-            duration-300
-            "
+    className="
+    w-11
+    h-11
+    rounded-full
+    flex
+    items-center
+    justify-center
+    transition
+    duration-300
+    "
 
-          >
+  >
 
-            <Icon
+    <Icon
+      icon={item.icon}
+      width={22}
+      className={theme.bottomNav.icon}
+    />
 
-              icon={item.icon}
+  </button>
 
-              width={22}
+))}
 
-              className={theme.bottomNav.icon}
+{/* Music */}
+<button
 
-            />
+  onClick={onToggleMusic}
 
-          </button>
+  className="
+  w-11
+  h-11
+  rounded-full
+  flex
+  items-center
+  justify-center
+  transition
+  duration-300
+  "
 
-        ))}
+>
+
+  <Icon
+
+    icon={
+      isPlaying
+        ? "ph:music-notes-fill"
+        : "ph:music-notes"
+    }
+
+    width={22}
+
+    className={theme.bottomNav.icon}
+
+  />
+
+</button>
 
       </div>
 

@@ -202,7 +202,7 @@ opacity-80
 "
 />
 
-          <div className="mt-6 flex justify-center">
+          <div className="mt-2 flex justify-center">
 
   <div
   className="
@@ -293,7 +293,7 @@ kesalahan penulisan nama.
 
             }}
             className={`
-mt-10
+mt-6
 w-full
 py-4
 rounded-full
@@ -320,16 +320,12 @@ ${theme.wrapper.button}
         musicUrl={musicUrl}
       />
 
-      <MusicButton
-        isPlaying={isPlaying}
-        onToggle={() =>
-          setIsPlaying(
-            !isPlaying
-          )
-        }
-      />
-
-<BottomNavigation />
+    <BottomNavigation
+  isPlaying={isPlaying}
+  onToggleMusic={() =>
+    setIsPlaying(!isPlaying)
+  }
+/>
       
         {children}
       
