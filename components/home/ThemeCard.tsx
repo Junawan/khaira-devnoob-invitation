@@ -152,7 +152,8 @@ export default function ThemeCard({
             className="
             flex-1
             text-center
-            py-3
+            px-8
+            py-4
             rounded-xl
             border
             hover:bg-stone-100
