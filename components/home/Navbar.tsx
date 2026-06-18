@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useAuth } from "@/providers/AuthProvider";
 
 export default function Navbar() {
@@ -37,15 +38,46 @@ export default function Navbar() {
       >
 
         <Link
-          href="/"
-          className="
-          text-2xl
-          font-bold
-          font-serif
-          "
-        >
-          Khaira Devnoob Invitation
-        </Link>
+  href="/"
+  className="
+  flex
+  items-center
+  gap-3
+  "
+>
+  <Image
+    src="/logo.png"
+    alt="KS25 Studio"
+    width={42}
+    height={42}
+    className="rounded-full"
+    priority
+  />
+
+  <div className="leading-tight">
+    <h1
+      className="
+      text-2xl
+      font-bold
+      font-serif
+      text-zinc-900
+      "
+    >
+      KS25 Studio
+    </h1>
+
+    <p
+      className="
+      text-xs
+      tracking-[0.25em]
+      text-zinc-500
+      uppercase
+      "
+    >
+      Digital Production
+    </p>
+  </div>
+</Link>
 
         <nav
           className="
