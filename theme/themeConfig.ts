@@ -487,7 +487,7 @@ divider:
   iconColor: "text-[#9A7B45]",
 
   input:
-    "w-full bg-zinc-900 border border-yellow-500/30 rounded-xl px-4 py-3 text-white",
+    "w-full bg-white border border-[#D4AF37]/30 rounded-xl px-4 py-3 text-white",
 
   textarea:
     "w-full min-h-[140px] bg-white border border-[#D4AF37]/30 rounded-xl px-5 py-4 text-[#5E503A] placeholder:text-zinc-400 leading-7 resize-none focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/40 transition",
