@@ -9,11 +9,6 @@ const menus = [
     href: "/dashboard",
     icon: "ph:house",
   },
-  {
-    title: "Buat Undangan",
-    href: "/dashboard/create",
-    icon: "ph:plus-circle",
-  },
 ];
 
 export default function CustomerSidebar() {

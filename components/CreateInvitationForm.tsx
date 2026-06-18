@@ -11,6 +11,8 @@ import {
 } from "firebase/firestore";
 import { useAuth } from "@/providers/AuthProvider";
 
+import { auth } from "@/lib/firebase";
+
 export default function CreateInvitationForm() {
 
     const router = useRouter();
@@ -37,6 +39,16 @@ export default function CreateInvitationForm() {
     },
   ]);
 
+  function toTitleCase(text: string) {
+
+  return text
+    .toLowerCase()
+    .replace(/\b\w/g, (char) =>
+      char.toUpperCase()
+    );
+
+}
+
     const createInvitation = async () => {
 
   if (!user || !profile) {
@@ -50,31 +62,42 @@ export default function CreateInvitationForm() {
       .replaceAll(" ", "-");
 
   await setDoc(
-    doc(db, "invitations", slug),
-    {
-      uid: user.uid,
+  doc(
+    db,
+    "invitations",
+    slug
+  ),
+  {
+    groom,
+    bride,
 
-      ownerName: profile.name,
+    date,
 
-      ownerEmail: profile.email,
+    // tanggal acara
+    eventDate: date,
 
-      ownerPhone: profile.phone,
+    loveStory,
 
-      groom,
+    // status undangan
+    status: "draft",
 
-      bride,
+    // akan diisi nanti
+    activatedAt: null,
 
-      date,
+    firstVisitorAt: null,
 
-      theme,
+    expiredAt: null,
 
-      loveStory,
+    // pemilik undangan
+    ownerUid: auth.currentUser?.uid,
 
-      createdAt: serverTimestamp(),
+    ownerEmail: auth.currentUser?.email,
 
-      updatedAt: serverTimestamp(),
-    }
-  );
+    createdAt: serverTimestamp(),
+
+    updatedAt: serverTimestamp(),
+  }
+);
 
   if (profile.role === "admin") {
 
@@ -127,7 +150,8 @@ export default function CreateInvitationForm() {
           placeholder="Nama Pria"
           value={groom}
           onChange={(e) =>
-            setGroom(e.target.value)
+            setGroom(
+              toTitleCase(e.target.value))
           }
           className="w-full border p-4 rounded-xl"
         />
@@ -137,7 +161,8 @@ export default function CreateInvitationForm() {
           placeholder="Nama Wanita"
           value={bride}
           onChange={(e) =>
-            setBride(e.target.value)
+            setBride(
+              toTitleCase(e.target.value))
           }
           className="w-full border p-4 rounded-xl"
         />

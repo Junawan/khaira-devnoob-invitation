@@ -18,4 +18,7 @@ export interface InvitationTheme {
 
   demo: string;
 
+  premium: boolean;
+  
+
 }

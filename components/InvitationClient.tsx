@@ -128,9 +128,6 @@ export default function InvitationClient({
     );
   }
 
-    const isLuxury =
-  data.theme === "luxury-black";
-
   console.log("DATA INVITATION:", data);
 
   return (
@@ -148,8 +145,6 @@ export default function InvitationClient({
 
       <main>
 
-      {isLuxury ? (
-
   <>
     <Hero
 groom={data.groom}
@@ -159,7 +154,9 @@ coverImage={data.coverImage}
 
 <Reveal>
 
-    <Opening />
+    <Opening
+  invitation={data}
+/>
 
 </Reveal>
 
@@ -218,78 +215,6 @@ coverImage={data.coverImage}
 </Reveal>
   </>
 
-) : (
-
-  <>
-  <Hero
-groom={data.groom}
-bride={data.bride}
-coverImage={data.coverImage}
-/>
-
-<Reveal>
-
-    <Opening />
-
-</Reveal>
-
-<Reveal delay={0.1}>
-
-    <Couple data={data} />
-
-</Reveal>
-
-<Reveal delay={0.15}>
-
-<LoveStory stories={data.loveStory}
-/>
-
-</Reveal>
-
-  <Reveal delay={0.2}>
-
-    <Events data={data}/>
-
-</Reveal>
-
- <Reveal direction="scale">
-
-    <Gallery
-  gallery={data.gallery}
-/>
-
-</Reveal>
-
-<Reveal>
-
-    <Countdown
-  targetDate={data.date}
-/>
-
-</Reveal>
-
-<Rsvp slug={slug} />
-
-<Wishes
-    slug={slug}
-/>
-
-<Location
-  mapsUrl={data.mapsUrl}
-  akadPlace={data.akadPlace}
-  resepsiPlace={data.resepsiPlace}
-/>
-
-<Reveal direction="up">
-
-    <Gift
-    data={data}
-/>
-
-</Reveal>
-</>
-
-)}
     </main>
     </ThemeLayout>
 

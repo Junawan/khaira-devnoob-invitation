@@ -31,6 +31,13 @@ import {
   invitationThemes,
 } from "@/data/invitationThemes";
 
+import OpeningTemplateModal
+from "@/components/modals/OpeningTemplateModal";
+import ThemePickerModal
+from "@/components/modals/ThemePickerModal";
+
+import { themes } from "@/theme/themeConfig";
+
 export default function EditInvitationForm({
   slug,
 }: {
@@ -140,8 +147,77 @@ const [brideMother, setBrideMother] =
   const [musicUrl, setMusicUrl] =
   useState("");
 
+  const [openingHeading, setOpeningHeading] =
+  useState("");
+
+const [openingContent, setOpeningContent] =
+  useState("");
+
+  const [openOpeningModal, setOpenOpeningModal] =
+  useState(false);
+
   const [loveStory, setLoveStory] =
   useState<any[]>([]);
+
+  const [openThemeModal, setOpenThemeModal] =
+  useState(false);
+
+  const currentTheme =
+
+invitationThemes.find(
+
+(item)=>
+
+item.id===theme
+
+);
+
+  function toTitleCase(text: string) {
+
+  return text
+    .toLowerCase()
+    .replace(/\b\w/g, (char) =>
+      char.toUpperCase()
+    );
+
+}
+
+function sentenceCase(text: string) {
+
+  return text
+
+    .toLowerCase()
+
+    .replace(
+
+      /(^\s*\w|[.!?]\s+\w)/g,
+
+      (char)=>
+
+      char.toUpperCase()
+
+    );
+
+}
+
+const useDefaultOpening = () => {
+
+  const currentTheme =
+    themes[
+      theme as keyof typeof themes
+    ];
+
+  if (!currentTheme) return;
+
+  setOpeningHeading(
+    currentTheme.opening.heading
+  );
+
+  setOpeningContent(
+    currentTheme.opening.content
+  );
+
+};
 
 
   useEffect(() => {
@@ -165,11 +241,15 @@ const [brideMother, setBrideMother] =
           const data =
             snap.data();
 
+            setOwnerUid(
+  data.ownerUid || ""
+);
+
             if (
 
 profile?.role !== "admin" &&
 
-data.uid !== user?.uid
+data.ownerUid !== user?.uid
 
 ) {
 
@@ -292,6 +372,14 @@ setBrideMother(
   data.brideMother || ""
 );
 
+setOpeningHeading(
+  data.openingHeading || ""
+);
+
+setOpeningContent(
+  data.openingContent || ""
+);
+
 setLoveStory(
   data.loveStory || []
 );
@@ -366,6 +454,9 @@ brideFather,
 brideMother,
 loveStory,
 musicUrl,
+openingHeading,
+
+openingContent,
 
 updatedAt: serverTimestamp(),
       }
@@ -393,8 +484,9 @@ updatedAt: serverTimestamp(),
           value={groom}
           onChange={(e) =>
             setGroom(
+              toTitleCase(
               e.target.value
-            )
+            ))
           }
           className="w-full border p-4 rounded-xl"
         />
@@ -403,8 +495,9 @@ updatedAt: serverTimestamp(),
           value={bride}
           onChange={(e) =>
             setBride(
+              toTitleCase(
               e.target.value
-            )
+            ))
           }
           className="w-full border p-4 rounded-xl"
         />
@@ -413,8 +506,9 @@ updatedAt: serverTimestamp(),
   value={groomTitle}
   onChange={(e)=>
     setGroomTitle(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Putra Pertama"
   className="w-full border p-4 rounded-xl"
@@ -424,8 +518,9 @@ updatedAt: serverTimestamp(),
   value={groomFather}
   onChange={(e)=>
     setGroomFather(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Nama Ayah"
   className="w-full border p-4 rounded-xl"
@@ -435,8 +530,9 @@ updatedAt: serverTimestamp(),
   value={groomMother}
   onChange={(e)=>
     setGroomMother(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Nama Ibu"
   className="w-full border p-4 rounded-xl"
@@ -446,8 +542,9 @@ updatedAt: serverTimestamp(),
   value={brideTitle}
   onChange={(e)=>
     setBrideTitle(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Putri Kedua"
   className="w-full border p-4 rounded-xl"
@@ -457,8 +554,9 @@ updatedAt: serverTimestamp(),
   value={brideFather}
   onChange={(e)=>
     setBrideFather(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Nama Ayah"
   className="w-full border p-4 rounded-xl"
@@ -468,8 +566,9 @@ updatedAt: serverTimestamp(),
   value={brideMother}
   onChange={(e)=>
     setBrideMother(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Nama Ibu"
   className="w-full border p-4 rounded-xl"
@@ -494,8 +593,9 @@ updatedAt: serverTimestamp(),
   value={akadDate}
   onChange={(e) =>
     setAkadDate(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Tanggal Akad"
   className="w-full border p-4 rounded-xl"
@@ -505,8 +605,9 @@ updatedAt: serverTimestamp(),
   value={akadTime}
   onChange={(e) =>
     setAkadTime(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Jam Akad"
   className="w-full border p-4 rounded-xl"
@@ -516,8 +617,9 @@ updatedAt: serverTimestamp(),
   value={akadPlace}
   onChange={(e) =>
     setAkadPlace(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Lokasi Akad"
   className="w-full border p-4 rounded-xl"
@@ -531,8 +633,9 @@ updatedAt: serverTimestamp(),
   value={resepsiDate}
   onChange={(e) =>
     setResepsiDate(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Tanggal Resepsi"
   className="w-full border p-4 rounded-xl"
@@ -542,8 +645,9 @@ updatedAt: serverTimestamp(),
   value={resepsiTime}
   onChange={(e) =>
     setResepsiTime(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Jam Resepsi"
   className="w-full border p-4 rounded-xl"
@@ -553,8 +657,9 @@ updatedAt: serverTimestamp(),
   value={resepsiPlace}
   onChange={(e) =>
     setResepsiPlace(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Lokasi Resepsi"
   className="w-full border p-4 rounded-xl"
@@ -611,8 +716,9 @@ updatedAt: serverTimestamp(),
   value={bankName}
   onChange={(e) =>
     setBankName(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Nama Bank"
   className="w-full border p-4 rounded-xl"
@@ -633,8 +739,9 @@ updatedAt: serverTimestamp(),
   value={accountName}
   onChange={(e) =>
     setAccountName(
+      toTitleCase(
       e.target.value
-    )
+    ))
   }
   placeholder="Nama Pemilik Rekening"
   className="w-full border p-4 rounded-xl"
@@ -665,31 +772,205 @@ updatedAt: serverTimestamp(),
 
 )}
 
-<select
-  value={theme}
-  onChange={(e) =>
-    setTheme(e.target.value)
-  }
-  className="
-  w-full
-  border
-  p-4
-  rounded-xl
-  "
+<div
+className="
+border
+rounded-3xl
+overflow-hidden
+"
 >
 
-  {invitationThemes.map((item) => (
+<img
 
-    <option
-      key={item.id}
-      value={item.id}
-    >
-      {item.name}
-    </option>
+src={currentTheme?.image}
 
-  ))}
+alt={currentTheme?.name}
 
-</select>
+className="
+w-full
+h-60
+object-cover
+"
+
+/>
+
+<div
+className="
+p-6
+"
+>
+
+<h3
+className="
+text-2xl
+font-bold
+"
+>
+
+{currentTheme?.name}
+
+</h3>
+
+<p
+className="
+text-zinc-500
+mt-2
+"
+>
+
+{currentTheme?.description}
+
+</p>
+
+<button
+type="button"
+onClick={() => setOpenThemeModal(true)}
+className="
+mt-6
+bg-[#9A7B45]
+text-white
+px-6
+py-3
+rounded-xl
+hover:bg-[#876c3d]
+transition
+"
+>
+
+Ganti Tema
+
+</button>
+
+</div>
+
+</div>
+
+<div className="mt-10">
+
+  <h3 className="text-xl font-semibold mb-5">
+
+    Opening
+
+  </h3>
+
+  <label className="font-medium">
+
+    Judul Opening
+
+  </label>
+
+  <input
+
+    value={openingHeading}
+
+    onChange={(e)=>
+
+      setOpeningHeading(
+        e.target.value
+      )
+
+    }
+
+    placeholder="Contoh: بِسْمِ اللّٰهِ..."
+
+    className="
+    w-full
+    border
+    p-4
+    rounded-xl
+    mt-2
+    "
+
+  />
+
+  <label
+    className="
+    font-medium
+    block
+    mt-6
+    "
+  >
+
+    Isi Opening
+
+  </label>
+
+  <textarea
+
+    value={openingContent}
+
+    onChange={(e)=>
+
+      setOpeningContent(
+        e.target.value
+      )
+
+    }
+
+    rows={8}
+
+    className="
+    w-full
+    border
+    p-4
+    rounded-xl
+    mt-2
+    "
+
+  />
+
+</div>
+
+<div
+className="
+flex
+gap-3
+mt-5
+"
+>
+
+<button
+
+type="button"
+
+onClick={useDefaultOpening}
+
+className="
+px-5
+py-3
+rounded-xl
+border
+"
+
+>
+
+Gunakan Default
+
+</button>
+
+<button
+
+type="button"
+
+onClick={()=>
+setOpenOpeningModal(true)
+}
+
+className="
+px-5
+py-3
+rounded-xl
+bg-[#9A7B45]
+text-white
+"
+
+>
+
+Pilih Template Opening
+
+</button>
+
+</div>
 
 <div className="mt-10">
 
@@ -742,7 +1023,8 @@ updatedAt: serverTimestamp(),
               [...loveStory];
 
             updated[index].title =
-              e.target.value;
+            toTitleCase(
+              e.target.value);
 
             setLoveStory(updated);
 
@@ -765,7 +1047,9 @@ updatedAt: serverTimestamp(),
               [...loveStory];
 
             updated[index].description =
-              e.target.value;
+            sentenceCase(
+              e.target.value
+            );
 
             setLoveStory(updated);
 
@@ -915,6 +1199,50 @@ updatedAt: serverTimestamp(),
         </button>
 
       </div>
+
+      <OpeningTemplateModal
+
+open={openOpeningModal}
+
+onClose={()=>
+
+setOpenOpeningModal(false)
+
+}
+
+onSelect={(heading, content)=>{
+
+setOpeningHeading(
+heading
+);
+
+setOpeningContent(
+content
+);
+
+}}
+
+/>
+
+<ThemePickerModal
+
+open={openThemeModal}
+
+current={theme}
+
+onClose={()=>
+
+setOpenThemeModal(false)
+
+}
+
+onSelect={(id)=>{
+
+setTheme(id);
+
+}}
+
+/>
 
     </div>
 

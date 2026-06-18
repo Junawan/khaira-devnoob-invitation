@@ -24,6 +24,7 @@ export const invitationThemes: InvitationTheme[] = [
 
     demo:
       "/invite/heri-lisa",
+      premium:true,
 
   },
 
@@ -49,6 +50,7 @@ export const invitationThemes: InvitationTheme[] = [
 
     demo:
       "/invite/budi-siti",
+      premium:true,
 
   },
 

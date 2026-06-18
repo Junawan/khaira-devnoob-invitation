@@ -70,9 +70,15 @@ photo: {
         "/images/luxury/divider_hero_bottom.png",
     },
 
-    opening:{
+    opening: {
 
-ornament:"/images/luxury/18.png"
+  ornament: "/images/luxury/18.png",
+
+  heading:
+    "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+
+  content:
+`Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami. Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.`,
 
 },
 
@@ -360,8 +366,17 @@ photo: {
   dividerBottom: "/images/elegant/divider2.png",
 },
 
-  opening: {
-  ornament: "/images/elegant/divider2.png",
+ opening: {
+
+  ornament:
+    "/images/elegant/divider2.png",
+
+  heading:
+    "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+
+  content:
+`Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami. Kehadiran dan doa restu Bapak/Ibu/Saudara/i merupakan suatu kehormatan serta kebahagiaan bagi kami.`,
+
 },
 
   couple: {

@@ -1,6 +1,6 @@
 "use client";
 
-import CustomerSidebar from "@/components/dashboard/CustomerSidebar";
+import Navbar from "@/components/home/Navbar";
 
 import { useAuth } from "@/providers/AuthProvider";
 
@@ -60,10 +60,6 @@ return null;
 
 return(
 
-<div className="flex">
-
-<CustomerSidebar/>
-
 <main
 className="
 flex-1
@@ -73,11 +69,11 @@ p-8
 "
 >
 
+    <Navbar/>
+
 {children}
 
 </main>
-
-</div>
 
 );
 
