@@ -83,7 +83,7 @@ font-bold
 
 Kenapa Memilih
 
-Khaira Invitation?
+KS25 Studio?
 
 </h2>
 

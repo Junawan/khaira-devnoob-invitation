@@ -86,7 +86,7 @@ text-zinc-600
 "
 >
 
-Aktifkan semua template Khaira Invitation
+Aktifkan semua template KS25 Studio
 
 </p>
 
@@ -111,7 +111,7 @@ font-bold
 "
 >
 
-Khaira Invitation Premium
+KS25 Studio Premium
 
 </h2>
 

@@ -38,7 +38,7 @@ export default function CustomerSidebar() {
           font-serif
           "
         >
-          Khaira Invitation
+          KS25 Studio
         </h2>
 
         <p className="text-zinc-500 mt-2">

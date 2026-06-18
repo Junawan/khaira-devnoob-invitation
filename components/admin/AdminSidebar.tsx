@@ -29,7 +29,7 @@ export default function AdminSidebar() {
 
         <Link href="/">
         <h2 className="text-3xl font-serif">
-          Khaira Admin
+          KS25 Studio Admin
           </h2>
         <p className="text-zinc-500 mt-2">
           Home

@@ -18,7 +18,7 @@ font-serif
 "
 >
 
-Khaira Devnoob Invitation
+KS25 Studio
 
 </h1>
 
