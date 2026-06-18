@@ -31,6 +31,7 @@ export default function CustomerSidebar() {
 
       <div className="p-8">
 
+        <Link href="/">
         <h2
           className="
           text-3xl
@@ -41,8 +42,9 @@ export default function CustomerSidebar() {
         </h2>
 
         <p className="text-zinc-500 mt-2">
-          Dashboard
+          Home
         </p>
+        </Link>
 
       </div>
 

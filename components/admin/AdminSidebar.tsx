@@ -27,9 +27,14 @@ export default function AdminSidebar() {
 
       <div className="p-8">
 
+        <Link href="/">
         <h2 className="text-3xl font-serif">
           Khaira Admin
-        </h2>
+          </h2>
+        <p className="text-zinc-500 mt-2">
+          Home
+        </p>
+        </Link>
 
       </div>
 

@@ -2,6 +2,7 @@
 
 import { useAuth } from "@/providers/AuthProvider";
 import { useState } from "react";
+import Navbar from "@/components/home/Navbar";
 
 export default function CheckoutPage() {
 
@@ -49,10 +50,10 @@ Terima kasih.`);
 className="
 min-h-screen
 bg-stone-100
-py-20
-px-5
 "
 >
+
+  <Navbar/>
 
 <div
 className="
@@ -67,6 +68,8 @@ mx-auto
 
 <h1
 className="
+max-w-4xl
+mx-auto
 text-5xl
 font-serif
 "
